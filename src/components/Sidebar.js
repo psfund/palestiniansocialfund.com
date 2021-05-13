@@ -69,7 +69,7 @@ export default function Sidebar(props) {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="absolute top-0 right-0 -mr-14 p-1">
+                <div className="absolute top-0 right-0 -me-14 p-1">
                   <button
                     className="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:bg-gray-600"
                     onClick={() => setSidebarOpen(false)}
@@ -101,7 +101,7 @@ export default function Sidebar(props) {
                         )}
                       >
                         <item.icon
-                          className="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6"
+                          className="text-gray-400 group-hover:text-gray-500 me-4 h-6 w-6"
                           aria-hidden="true"
                         />
                         {item.name}
@@ -149,7 +149,7 @@ export default function Sidebar(props) {
                     href={item.href}
                     className="group py-2 px-4 flex items-center text-sm font-medium hover:text-gray-900 transition-colors duration-200 text-gray-500"
                   >
-                    <div className="mr-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
+                    <div className="me-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
                       <item.icon
                         className="h-4 w-4 text-gray-600"
                         aria-hidden="true"
