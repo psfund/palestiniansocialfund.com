@@ -34,14 +34,14 @@ export default function LocaleSwitch() {
   return (
     <div>
       <label
-        htmlFor="location"
+        htmlFor="locale"
         className="block text-sm font-medium text-gray-700 hidden"
       >
-        Location
+        Locale
       </label>
       <select
-        id="location"
-        name="location"
+        id="locale"
+        name="locale"
         className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm rounded-md"
         value={selected}
         onChange={(e) => setSelected(e.target.value)}
