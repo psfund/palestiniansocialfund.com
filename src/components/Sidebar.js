@@ -1,25 +1,36 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
+import Link from "next/link";
 import { Dialog, Transition } from "@headlessui/react";
 import {
-  NewspaperIcon,
+  // NewspaperIcon,
   LightBulbIcon,
   HomeIcon,
-  ScaleIcon,
-  FolderOpenIcon,
+  // ScaleIcon,
+  // FolderOpenIcon,
   XIcon,
 } from "@heroicons/react/solid";
 
 const navigation = [
-  { name: "Home", href: "#", icon: HomeIcon, current: false },
-  { name: "Philosophy", href: "#", icon: LightBulbIcon, current: false },
-  { name: "Blog", href: "#", icon: NewspaperIcon, current: false },
-  { name: "Fund Tracker", href: "#", icon: ScaleIcon, current: false },
-  { name: "Open Projects", href: "#", icon: FolderOpenIcon, current: false },
+  { name: "Home", href: "/", icon: HomeIcon, current: false },
+  {
+    name: "Philosophy",
+    href: "/philosophy",
+    icon: LightBulbIcon,
+    current: false,
+  },
+  // { name: "News", href: "#", icon: NewspaperIcon, current: false },
+  // { name: "Fund Tracker", href: "#", icon: ScaleIcon, current: false },
+  // { name: "Open Projects", href: "#", icon: FolderOpenIcon, current: false },
 ];
 const secondaryNavigation = [
-  { name: "How we work", href: "#" },
-  { name: "Our team", href: "#" },
-  { name: "FAQs", href: "#" },
+  {
+    name: "A Resistance Economy: What is it and can it provide an alternative? (PDF)",
+    href: "https://www.rosalux.de/fileadmin/rls_uploads/pdfs/sonst_publikationen/A_Resistance_Economy.pdf",
+  },
+  {
+    name: "Localising the Economy as a Resistance Response (PDF)",
+    href: "https://www.academia.edu/43145566/Localising_the_Economy_as_a_Resistance_Response_A_Contribution_to_the_Resistance_Economy_Debate_in_the_Occupied_Palestinian_Territories",
+  },
 ];
 
 function classNames(...classes) {
@@ -81,31 +92,31 @@ export default function Sidebar(props) {
               </Transition.Child>
               <div className="flex-shrink-0 px-4 flex items-center">
                 <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/easywire-logo-purple-600-mark-gray-900-text.svg"
-                  alt="Easywire"
+                  className="h-10 w-auto"
+                  src="/logo.svg"
+                  alt="Palestinian Social Fund"
                 />
               </div>
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="h-full flex flex-col">
                   <div className="space-y-1">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-purple-50 border-purple-600 text-purple-600"
-                            : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                          "group border-l-4 py-2 px-3 flex items-center text-base font-medium"
-                        )}
-                      >
-                        <item.icon
-                          className="text-gray-400 group-hover:text-gray-500 me-4 h-6 w-6"
-                          aria-hidden="true"
-                        />
-                        {item.name}
-                      </a>
+                      <Link key={item.name} href={item.href}>
+                        <a
+                          className={classNames(
+                            item.current
+                              ? "bg-purple-50 border-purple-600 text-purple-600"
+                              : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                            "group border-l-4 py-2 px-3 flex items-center text-base font-medium"
+                          )}
+                        >
+                          <item.icon
+                            className="text-gray-400 group-hover:text-gray-500 me-4 h-6 w-6"
+                            aria-hidden="true"
+                          />
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                   <div className="mt-auto pt-10 space-y-1">
@@ -113,6 +124,7 @@ export default function Sidebar(props) {
                       <a
                         key={item.name}
                         href={item.href}
+                        target="_blank"
                         className="group border-l-4 border-transparent py-2 px-3 flex items-center text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
@@ -135,28 +147,30 @@ export default function Sidebar(props) {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <nav className="pb-4 flex flex-col flex-grow overflow-y-auto">
             <div className="flex-shrink-0 px-4 flex items-center absolute t-0 bg-white h-20">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/easywire-logo-purple-600-mark-gray-900-text.svg"
-                alt="Easywire"
-              />
+              <Link href="/">
+                <a>
+                  <img
+                    className="h-10 w-auto"
+                    src="/logo.svg"
+                    alt="Palestinian Social Fund"
+                  />
+                </a>
+              </Link>
             </div>
             <div className="flex flex-col pt-16 pb-10 lg:pt-28 lg:pb-14">
               <div className="flex-1 space-y-1">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="group py-2 px-4 flex items-center text-sm font-medium hover:text-gray-900 transition-colors duration-200 text-gray-500"
-                  >
-                    <div className="me-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
-                      <item.icon
-                        className="h-4 w-4 text-gray-600"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    {item.name}
-                  </a>
+                  <Link key={item.name} href={item.href}>
+                    <a className="group py-2 px-4 flex items-center text-sm font-medium hover:text-gray-900 transition-colors duration-200 text-gray-500">
+                      <div className="me-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
+                        <item.icon
+                          className="h-4 w-4 text-gray-600"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      {item.name}
+                    </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -168,6 +182,7 @@ export default function Sidebar(props) {
                 <a
                   key={item.name}
                   href={item.href}
+                  target="_blank"
                   className="px-4 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500"
                 >
                   {item.name}
