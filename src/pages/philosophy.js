@@ -28,7 +28,7 @@ const Philosophy = () => {
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
         The pillars we stand upon:
       </h1>
-      <ul class="list-disc list-inside text-2xl tracking-tight text-gray-500">
+      <ul className="list-disc list-inside text-2xl tracking-tight text-gray-500">
         <li className="my-2">
           <span className="underline">Transparency</span>, a measure against
           ill-will and two-faced politics
@@ -51,7 +51,7 @@ const Philosophy = () => {
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
         Main activities:
       </h1>
-      <ul class="list-disc list-inside text-2xl tracking-tight text-gray-500">
+      <ul className="list-disc list-inside text-2xl tracking-tight text-gray-500">
         <li className="my-2">
           Building open-source software tools to help diaspora Palestinians pool
           their capital and resources
