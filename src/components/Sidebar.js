@@ -5,7 +5,7 @@ import {
   // NewspaperIcon,
   LightBulbIcon,
   HomeIcon,
-  // ScaleIcon,
+  ScaleIcon,
   // FolderOpenIcon,
   XIcon,
 } from "@heroicons/react/solid";
@@ -19,7 +19,7 @@ const navigation = [
     current: false,
   },
   // { name: "News", href: "#", icon: NewspaperIcon, current: false },
-  // { name: "Fund Tracker", href: "#", icon: ScaleIcon, current: false },
+  { name: "Track Fund", href: "/fund", icon: ScaleIcon, current: false },
   // { name: "Open Projects", href: "#", icon: FolderOpenIcon, current: false },
 ];
 const secondaryNavigation = [
