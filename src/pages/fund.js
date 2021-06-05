@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import { MainLayout } from "src/layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ArrowSmDownIcon, ArrowSmUpIcon } from "@heroicons/react/solid";
+import { ArrowSmUpIcon } from "@heroicons/react/solid";
 
 const stats = [
   {
