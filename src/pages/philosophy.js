@@ -7,74 +7,92 @@ const Philosophy = () => {
 
   return (
     <MainLayout>
-      <h1 className="text-5xl leading-none font-extrabold text-gray-900 tracking-tight mb-10">
+      <h1 className="text-5xl leading-none font-extrabold text-gray-900 tracking-tight">
         Our philosophy
       </h1>
-      <p className="text-2xl tracking-tight text-gray-500 mb-5">
-        Unite the efforts and activities of Palestinian communities around the
-        world
-      </p>
-      <p className="text-xl tracking-tight text-gray-400 italic mb-5">By</p>
-      <p className="text-2xl tracking-tight text-gray-500 mb-5">
-        Pooling capital and resources across the Palestinian diaspora
-      </p>
-      <p className="text-xl tracking-tight text-gray-400 italic mb-5">
-        In order to
-      </p>
-      <p className="text-2xl tracking-tight text-gray-500">
-        Fund, develop and revive the agricultural foundation of the Palestinian
-        economy.
+      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
+        What is it we are looking to accomplish?
+      </h1>
+      <p className="text-xl tracking-tight text-gray-500">
+        We want to generate recurring solidarity capital from the diaspora &
+        allies to continuously support Palestinian cooperatives in the
+        agricultural sector.
       </p>
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        The pillars we stand upon:
+        Why? What is the urgency?
       </h1>
-      <ul className="list-disc list-inside text-2xl tracking-tight text-gray-500">
+      <p className="text-xl tracking-tight text-gray-500 mb-5">
+        The theft of our resources and the destruction of our local production
+        has left our economy{" "}
+        <span className="underline">
+          captive to foreign aid and dependent on importing goods
+        </span>
+        , mainly from the occupier.
+      </p>
+      <p className="text-xl tracking-tight text-gray-500">
+        By directing the economic resources of the diaspora & allies into
+        Palestinian production, we can regain sovereignty over our sustensance.
+      </p>
+      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
+        Goals
+      </h1>
+      <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
         <li className="my-2">
-          <span className="underline">Transparency</span>, a measure against
+          500-750 supporters by the end of the year by end of 2021
+        </li>
+        <li className="my-2">
+          Invest in growing 1-2 agricultural cooperatives
+        </li>
+        <li className="my-2">
+          Create a replicable model for at least 1 cooperative to expand it to
+          other villages
+        </li>
+      </ul>
+
+      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
+        Investment model
+      </h1>
+      <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
+        <li className="my-2">
+          <span className="underline">Equity-free</span>: we take no equity from
+          the cooperatives we invest in
+        </li>
+        <li className="my-2">
+          <span className="underline">Criteria</span>: must be an agricultural
+          cooperative
+        </li>
+        <li className="my-2">
+          <span className="underline">Process</span>: invest in coop → simplify
+          coop's model → replicate coop
+        </li>
+      </ul>
+
+      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
+        The pillars we stand upon
+      </h1>
+      <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
+        <li className="my-2">
+          <span className="underline">Transparency</span>: a measure against
           ill-will and two-faced politics
         </li>
         <li className="my-2">
-          <span className="underline">Cooperativism</span>, a framework for
+          <span className="underline">Cooperativism</span>: a framework for
           democratic workplaces and communal governance
         </li>
         <li className="my-2">
-          <span className="underline">Unity</span>, achieving a whole larger
+          <span className="underline">Unity</span>: achieving a whole larger
           than the sum of our parts
         </li>
         <li className="my-2">
           <span className="underline">
             Self-sufficiency {`&`} sustainability
           </span>
-          , achieving food security and harmony with the environment
+          : achieving food security and harmony with the environment
         </li>
       </ul>
-      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        Main activities:
-      </h1>
-      <ul className="list-disc list-inside text-2xl tracking-tight text-gray-500">
-        <li className="my-2">
-          Building open-source software tools to help diaspora Palestinians pool
-          their capital and resources
-        </li>
-        <li className="my-2">
-          Funding and scaling agricultural cooperatives in Palestine with a
-          focus on rural villages
-        </li>
-      </ul>
-      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        How we operate:
-      </h1>
-      <p className="text-2xl tracking-tight text-gray-500 mb-5">
-        We’re a volunteer-based non-profit that believes in a united economic
-        front for the Palestinian cause. Email us at{" "}
-        <a className="underline" href="mailto:psfund@protonmail.com">
-          psfund@protonmail.com
-        </a>{" "}
-        to contribute.
-      </p>
-      <div className="relative lg:col-span-1 mt-14">
-        <blockquote className="mt-6 text-ggra">
-          <p className="text-xl font-medium sm:text-2xl">
+      <div className="relative lg:col-span-1 mt-14 bg-gray-100 rounded p-5">
+        <blockquote className="text-ggra">
+          <p className="text-xl sm:text-xl">
             &ldquo;You own something in this world... so rise!&ldquo;
           </p>
           <footer className="mt-1">
