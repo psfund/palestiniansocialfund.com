@@ -7,6 +7,7 @@ const PaymentSchema = new Schema(
     user: { type: Schema.Types.ObjectId, ref: "User" },
     status: { type: String, require: true },
     ref: { type: String, required: true }, // e.x. stripe's charge_id
+    currency: { type: String, required: true},
     processor: { type: String, required: true }, // e.x. "stripe"
     amount: { type: Number, required: true },
     fees: {
