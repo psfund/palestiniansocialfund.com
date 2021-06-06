@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   // NewspaperIcon,
@@ -11,15 +12,15 @@ import {
 } from "@heroicons/react/solid";
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, current: false },
+  { name: "home", href: "/", icon: HomeIcon, current: false },
   {
-    name: "Philosophy",
+    name: "philosophy",
     href: "/philosophy",
     icon: LightBulbIcon,
     current: false,
   },
   // { name: "News", href: "#", icon: NewspaperIcon, current: false },
-  { name: "Track Fund", href: "/fund", icon: ScaleIcon, current: false },
+  { name: "track_fund", href: "/fund", icon: ScaleIcon, current: false },
   // { name: "Open Projects", href: "#", icon: FolderOpenIcon, current: false },
 ];
 const secondaryNavigation = [
@@ -38,6 +39,7 @@ function classNames(...classes) {
 }
 
 export default function Sidebar(props) {
+  const { t } = useTranslation();
   const { sidebarOpen, setSidebarOpen } = props;
 
   return (
@@ -114,7 +116,7 @@ export default function Sidebar(props) {
                             className="text-gray-400 group-hover:text-gray-500 me-4 h-6 w-6"
                             aria-hidden="true"
                           />
-                          {item.name}
+                          {t(item.name)}
                         </a>
                       </Link>
                     ))}
@@ -168,7 +170,7 @@ export default function Sidebar(props) {
                           aria-hidden="true"
                         />
                       </div>
-                      {item.name}
+                      {t(item.name)}
                     </a>
                   </Link>
                 ))}
