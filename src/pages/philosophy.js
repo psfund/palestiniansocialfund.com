@@ -50,7 +50,7 @@ const Philosophy = () => {
       </ul>
 
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        Investment model
+        How we fund cooperatives
       </h1>
       <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
         <li className="my-2">
