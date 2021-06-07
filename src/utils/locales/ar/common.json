@@ -10,5 +10,11 @@
     "choose": "إختار",
     "click_here": "الضغط هنا",
     "resources": "مصادر",
-    "billing_cycle": "دورة الدفع"
+    "billing_cycle": "دورة الدفع",
+    "recent_activity": "النشاط الأخير",
+    "transaction": "المعاملة",
+    "amount": "المبلغ",
+    "status": "الحالة",
+    "date": "التاريخ",
+    "paid": "مدفوع"
 }

@@ -10,5 +10,11 @@
     "choose": "Choose",
     "click_here": "Click here",
     "resources": "Resources",
-    "billing_cycle": "Billing cycle"
+    "billing_cycle": "Billing cycle",
+    "recent_activity": "Recent Activity",
+    "transaction": "Transaction",
+    "amount": "Amount",
+    "status": "Status",
+    "date": "Date",
+    "paid": "Paid"
 }
