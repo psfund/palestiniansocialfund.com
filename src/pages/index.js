@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
-import { MainLayout } from "src/layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
 import { Line } from "rc-progress";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { MainLayout } from "src/layouts";
+import { stripe } from "src/clients";
 
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -58,7 +59,7 @@ const tiers = [
   },
 ];
 
-const Home = () => {
+const Home = ({ balance }) => {
   const { t } = useTranslation();
   const { locale } = useRouter();
 
@@ -89,7 +90,7 @@ const Home = () => {
             <div className="px-4 py-5 sm:p-6">
               <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
                 <div className="flex items-baseline text-2xl font-semibold text-green-600">
-                  $5999
+                  ${balance.amount / 100} {balance.currency.toUpperCase()}
                   <span className="ms-2 text-sm font-medium text-gray-500">
                     {t("home:raised_of", { goal: "10,000" })}
                   </span>
@@ -413,10 +414,16 @@ const Home = () => {
   );
 };
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common", "home"])),
-  },
-});
+export const getStaticProps = async ({ locale }) => {
+  const balance = await stripe.balance.retrieve();
+  delete balance.available[0].source_types;
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "home"])),
+      balance: balance.available[0],
+    },
+  };
+};
 
 export default Home;

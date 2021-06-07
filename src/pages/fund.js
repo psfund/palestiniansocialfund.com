@@ -3,31 +3,14 @@ import { MainLayout } from "src/layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ArrowSmUpIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
+import moment from "moment";
+import { stripe } from "src/clients";
 
-const stats = [
-  {
-    name: "balance",
-    stat: "$50,000",
-  },
-  {
-    name: "total_memberships",
-    stat: "71,897",
-  },
-];
-
-const transactions = [
-  {
-    id: 1,
-    amount: "$11",
-    status: "paid",
-    date: "Jul 12, 2021",
-  },
-  // More people...
-];
-
-const Fund = () => {
+const Fund = ({ stats, charges }) => {
   const { locale } = useRouter();
   const { t } = useTranslation();
+
+  moment.locale(locale);
 
   return (
     <MainLayout>
@@ -42,18 +25,20 @@ const Fund = () => {
 
       <div className="mb-8">
         <dl className="grid grid-cols-1 rounded bg-white overflow-hidden border border-gray-300 divide-y divide-gray-200 md:grid-cols-2 md:divide-y-0 md:divide-x">
-          {stats.map((item) => (
-            <div key={item.name} className="px-4 py-5 sm:p-6">
-              <dt className="text-base font-normal text-gray-900">
-                {t(`fund:${item.name}`)}
-              </dt>
-              <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
-                <div className="flex items-baseline text-2xl font-semibold text-green-600">
-                  {item.stat}
-                </div>
-              </dd>
-            </div>
-          ))}
+          {stats.map((item) => {
+            return (
+              <div key={item.name} className="px-4 py-5 sm:p-6">
+                <dt className="text-base font-normal text-gray-900">
+                  {t(`fund:${item.name}`)}
+                </dt>
+                <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
+                  <div className="flex items-baseline text-2xl font-semibold text-green-600">
+                    {item.stat}
+                  </div>
+                </dd>
+              </div>
+            );
+          })}
         </dl>
       </div>
 
@@ -102,8 +87,8 @@ const Fund = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {transactions.map((transaction) => (
-                    <tr key={transaction.id}>
+                  {charges.map((charge, i) => (
+                    <tr key={i}>
                       <td className="flex px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         <ArrowSmUpIcon
                           className="me-2 flex-shrink-0 self-center h-5 w-5 bg-green-100 text-green-600 rounded-full"
@@ -112,15 +97,15 @@ const Fund = () => {
                         {t("fund:payment")}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {transaction.amount}
+                        {charge.amount / 100} {charge.currency.toUpperCase()}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         <span className="inline-flex items-center px-3 py-0.5 rounded-full bg-green-100 text-green-600">
-                          {t(transaction.status)}
+                          {t(charge.status)}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {transaction.date}
+                        {moment.unix(charge.date).format("DD MMM YYYY")}
                       </td>
                     </tr>
                   ))}
@@ -134,10 +119,40 @@ const Fund = () => {
   );
 };
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common", "fund"])),
-  },
-});
+export const getStaticProps = async ({ locale }) => {
+  const balance = await stripe.balance.retrieve();
+  delete balance.available[0].source_types;
+
+  const subscriptions = await stripe.subscriptions.list();
+
+  const charges = await stripe.charges.list();
+  const cleanCharges = charges.data.map((c) => ({
+    amount: c.amount,
+    status: c.paid ? "paid" : "",
+    date: c.created,
+    currency: c.currency,
+  }));
+
+  const stats = [
+    {
+      name: "balance",
+      stat: `${
+        balance.available[0].amount / 100
+      } ${balance.available[0].currency.toUpperCase()}`,
+    },
+    {
+      name: "total_memberships",
+      stat: subscriptions.data.length,
+    },
+  ];
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "fund"])),
+      stats: stats,
+      charges: cleanCharges,
+    },
+  };
+};
 
 export default Fund;
