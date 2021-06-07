@@ -8,96 +8,97 @@ const Philosophy = () => {
   return (
     <MainLayout>
       <h1 className="text-5xl leading-none font-extrabold text-gray-900 tracking-tight">
-        Our philosophy
+        {t("philosophy:title")}
       </h1>
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        What is it we are looking to accomplish?
+        {t("philosophy:section_one_title")}
       </h1>
       <p className="text-xl tracking-tight text-gray-500">
-        We want to generate recurring solidarity capital from the diaspora &
-        allies to continuously support Palestinian cooperatives in the
-        agricultural sector.
+        {t("philosophy:section_one_description")}
       </p>
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        Why? What is the urgency?
+        {t("philosophy:section_two_title")}
       </h1>
       <p className="text-xl tracking-tight text-gray-500 mb-5">
-        The theft of our resources and the destruction of our local production
-        has left our economy{" "}
+        {t("philosophy:section_two_description_1.1")}
         <span className="underline">
-          captive to foreign aid and dependent on importing goods
+          {t("philosophy:section_two_description_1.1_underlined")}
         </span>
-        , mainly from the occupier.
+        {t("philosophy:section_two_description_1.2")}
       </p>
       <p className="text-xl tracking-tight text-gray-500">
-        By directing the economic resources of the diaspora & allies into
-        Palestinian production, we can regain sovereignty over our sustensance.
+        {t("philosophy:section_two_description_2")}
       </p>
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        Goals
+        {t("philosophy:section_three_title")}
       </h1>
       <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
-        <li className="my-2">
-          500-750 supporters by the end of the year by end of 2021
-        </li>
-        <li className="my-2">
-          Invest in growing 1-2 agricultural cooperatives
-        </li>
-        <li className="my-2">
-          Create a replicable model for at least 1 cooperative to expand it to
-          other villages
-        </li>
+        <li className="my-2">{t("philosophy:section_three_bullet_1")}</li>
+        <li className="my-2">{t("philosophy:section_three_bullet_2")}</li>
+        <li className="my-2">{t("philosophy:section_three_bullet_3")}</li>
       </ul>
 
       <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        How we fund cooperatives
+        {t("philosophy:section_four_title")}
       </h1>
       <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
         <li className="my-2">
-          <span className="underline">Equity-free</span>: we take no equity from
-          the cooperatives we invest in
-        </li>
-        <li className="my-2">
-          <span className="underline">Criteria</span>: must be an agricultural
-          cooperative
-        </li>
-        <li className="my-2">
-          <span className="underline">Process</span>: invest in coop → simplify
-          coop's model → replicate coop
-        </li>
-      </ul>
-
-      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
-        The pillars we stand upon
-      </h1>
-      <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
-        <li className="my-2">
-          <span className="underline">Transparency</span>: a measure against
-          ill-will and two-faced politics
-        </li>
-        <li className="my-2">
-          <span className="underline">Cooperativism</span>: a framework for
-          democratic workplaces and communal governance
-        </li>
-        <li className="my-2">
-          <span className="underline">Unity</span>: achieving a whole larger
-          than the sum of our parts
+          <span className="underline">
+            {t("philosophy:section_four_bullet_1_title")}
+          </span>{" "}
+          {t("philosophy:section_four_bullet_1_description")}
         </li>
         <li className="my-2">
           <span className="underline">
-            Self-sufficiency {`&`} sustainability
-          </span>
-          : achieving food security and harmony with the environment
+            {t("philosophy:section_four_bullet_2_title")}
+          </span>{" "}
+          {t("philosophy:section_four_bullet_2_description")}
+        </li>
+        <li className="my-2">
+          <span className="underline">
+            {t("philosophy:section_four_bullet_3_title")}
+          </span>{" "}
+          {t("philosophy:section_four_bullet_3_description")}
+        </li>
+      </ul>
+
+      <h1 className="inline-block text-3xl font-extrabold text-gray-900 tracking-tight mt-14 mb-5">
+        {t("philosophy:section_five_title")}
+      </h1>
+      <ul className="list-disc list-inside text-xl tracking-tight text-gray-500">
+        <li className="my-2">
+          <span className="underline">
+            {t("philosophy:section_five_bullet_1_title")}
+          </span>{" "}
+          {t("philosophy:section_five_bullet_1_description")}
+        </li>
+        <li className="my-2">
+          <span className="underline">
+            {t("philosophy:section_five_bullet_2_title")}
+          </span>{" "}
+          {t("philosophy:section_five_bullet_2_description")}
+        </li>
+        <li className="my-2">
+          <span className="underline">
+            {t("philosophy:section_five_bullet_3_title")}
+          </span>{" "}
+          {t("philosophy:section_five_bullet_3_description")}
+        </li>
+        <li className="my-2">
+          <span className="underline">
+            {t("philosophy:section_five_bullet_4_title")}
+          </span>{" "}
+          {t("philosophy:section_five_bullet_4_description")}
         </li>
       </ul>
       <div className="relative lg:col-span-1 mt-14 bg-gray-100 rounded p-5">
         <blockquote className="text-ggra">
           <p className="text-xl sm:text-xl">
-            &ldquo;You own something in this world... so rise!&ldquo;
+            &ldquo;{t("philosophy:quote")}&ldquo;
           </p>
           <footer className="mt-1">
             <p className="flex flex-col font-medium">
-              <span>—&nbsp;&nbsp;Ghassan Kanafani</span>
+              <span>—&nbsp;&nbsp;{t("philosophy:quoter")}</span>
             </p>
           </footer>
         </blockquote>
@@ -108,7 +109,7 @@ const Philosophy = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
+    ...(await serverSideTranslations(locale, ["common", "philosophy"])),
   },
 });
 

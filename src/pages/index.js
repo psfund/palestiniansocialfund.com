@@ -16,43 +16,28 @@ const LightGallery = dynamic(() => import("lightgallery/react"), {
 
 const people = [
   {
-    name: "Saba Abbas 🇵🇸",
-    role: "Venture Analyst",
+    name: "saba_abbas",
+    role: "project_analyst",
   },
   {
-    name: "Sami Fuller 🇵🇸 🇺🇸",
-    role: "Social Content Producer",
+    name: "sami_fuller",
+    role: "social_content_producer",
   },
   {
-    name: "Youcef Rahmani 🇩🇿 🇫🇷",
-    role: "Lawyer",
+    name: "youcef_rahmani",
+    role: "lawyer",
   },
   {
-    name: "Imad Dodin 🇵🇸",
-    role: "Software Developer",
+    name: "imad_dodin",
+    role: "software_developer",
   },
   {
-    name: "Adam Albarghouthi 🇵🇸",
-    role: "Software Developer",
+    name: "adam_albarghouthi",
+    role: "software_developer",
   },
   {
-    name: "You",
-    role: "How can you contribute?",
-  },
-];
-
-const announcements = [
-  {
-    id: 1,
-    title: "Fund Tracker",
-    preview:
-      "A tool to track the source and destination of each transaction the Social Fund undertakes.",
-  },
-  {
-    id: 2,
-    title: "Open Projects",
-    preview:
-      "A tool where volunteers can readily contribute to the projects the fund is undertaking.",
+    name: "you",
+    role: "contribute",
   },
 ];
 
@@ -104,13 +89,15 @@ const Home = () => {
             <div className="px-4 py-5 sm:p-6">
               <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
                 <div className="flex items-baseline text-2xl font-semibold text-green-600">
-                  $34,999
+                  $5999
                   <span className="ms-2 text-sm font-medium text-gray-500">
-                    raised of $50,000 goal
+                    {t("home:raised_of", { goal: "10,000" })}
                   </span>
                 </div>
               </dd>
-              <div className="mt-3">
+              <div
+                className={`${locale === "ar" ? "progress-bar-rtl" : ""} mt-3`}
+              >
                 <Line
                   percent="69"
                   strokeWidth="2"
@@ -118,6 +105,7 @@ const Home = () => {
                   strokeColor="#10B981"
                   trailColor="#D1FAE5"
                   strokeLinecap="square"
+                  direction="rtl"
                 />
               </div>
             </div>
@@ -185,7 +173,7 @@ const Home = () => {
               target="_blank"
               className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#4267B2] hover:bg-[#375695] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
             >
-              Visit their Facebook page
+              {t("home:visit_fb")}
             </a>
           </Link>
         </div>
@@ -212,7 +200,7 @@ const Home = () => {
                   htmlFor="billing"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Billing cycle
+                  {t("common:billing_cycle")}
                 </label>
                 <select
                   id="billing"
@@ -221,15 +209,15 @@ const Home = () => {
                   value={billing}
                   onChange={(e) => setBilling(e.target.value)}
                 >
-                  <option value="monthly">Monthly</option>
-                  <option value="yearly">Yearly</option>
+                  <option value="monthly">{t("common:monthly")}</option>
+                  <option value="yearly">{t("common:yearly")}</option>
                 </select>
               </div>
               {tiers.map((tier) => (
                 <section key={tier.name}>
                   <div className="p-4 border rounded mb-8">
                     <h2 className="text-lg leading-6 font-medium text-gray-900">
-                      {tier.name}
+                      {t(`common:${tier.name}`)}
                     </h2>
                     <p className="mt-4">
                       <span className="text-4xl font-extrabold text-gray-900">
@@ -239,7 +227,9 @@ const Home = () => {
                           : tier.priceYearly}
                       </span>{" "}
                       <span className="text-base font-medium text-gray-500">
-                        {billing === "monthly" ? "per month" : "per year"}
+                        {billing === "monthly"
+                          ? t("common:monthly")
+                          : t("common:yearly")}
                       </span>
                     </p>
                     <a
@@ -250,7 +240,7 @@ const Home = () => {
                       }
                       className="mt-6 block border border-gray-800 rounded-md bg-gray-800 w-full py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
                     >
-                      Choose
+                      {t("common:choose")}
                     </a>
                   </div>
                 </section>
@@ -268,7 +258,7 @@ const Home = () => {
                       }`}
                       scope="col"
                     >
-                      <span>Billing cycle</span>
+                      <span> {t("common:billing_cycle")}</span>
                     </th>
                     {tiers.map((tier) => (
                       <th
@@ -278,7 +268,7 @@ const Home = () => {
                         }`}
                         scope="col"
                       >
-                        {tier.name}
+                        {t(`common:${tier.name}`)}
                       </th>
                     ))}
                   </tr>
@@ -303,8 +293,8 @@ const Home = () => {
                           value={billing}
                           onChange={(e) => setBilling(e.target.value)}
                         >
-                          <option value="monthly">Monthly</option>
-                          <option value="yearly">Yearly</option>
+                          <option value="monthly">{t("common:monthly")}</option>
+                          <option value="yearly">{t("common:yearly")}</option>
                         </select>
                       </div>
                     </th>
@@ -322,7 +312,9 @@ const Home = () => {
                                 : tier.priceYearly}
                             </span>{" "}
                             <span className="text-base font-medium text-gray-500">
-                              {billing === "monthly" ? "per month" : "per year"}
+                              {billing === "monthly"
+                                ? t("common:monthly")
+                                : t("common:yearly")}
                             </span>
                           </p>
                           <a
@@ -333,7 +325,7 @@ const Home = () => {
                             }
                             className="flex-grow block w-full bg-gray-800 border border-gray-800 rounded-md 5 py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
                           >
-                            Choose
+                            {t("common:choose")}
                           </a>
                         </div>
                       </td>
@@ -345,13 +337,12 @@ const Home = () => {
           </div>
 
           <div className="rounded bg-gray-100 text-sm text-gray-500 p-3">
-            Or if you'd like to support the fund one time, start with $5 and
-            increment your way up to your desired amount.{" "}
+            {t("home:one_time_disclaimer")}{" "}
             <a
               className="underline hover:text-gray-900"
               href="https://buy.stripe.com/3cseYQcEg4783WU7ss"
             >
-              Click here
+              {t("common:click_here")}
             </a>
           </div>
         </div>
@@ -374,15 +365,17 @@ const Home = () => {
             <li key={person.name}>
               <div className="flex items-center space-x-4 lg:space-x-6">
                 <div className="font-medium leading-6 space-y-1">
-                  <h3>{person.name}</h3>
-                  <p className="text-gray-500">{person.role}</p>
+                  <h3>{t(`home:${person.name}`)}</h3>
+                  <p className="text-gray-500">{t(`home:${person.role}`)}</p>
                 </div>
               </div>
             </li>
           ))}
         </ul>
         <div className="my-14">
-          <span className="text-gray-500">Or connect with us over</span>
+          <span className="text-gray-500">
+            {t("home:or_connect_with_us_over")}
+          </span>
         </div>
         <ul className="grid sm:grid-cols-2 gap-6 xl:gap-8">
           <li>
@@ -404,9 +397,7 @@ const Home = () => {
               </svg>
               <div className="flex-auto ms-4">
                 <h3>GitHub Discussions</h3>
-                <p className="text-gray-500">
-                  Connect with members developing the fund.
-                </p>
+                <p className="text-gray-500">{t("home:github_description")}</p>
               </div>
             </a>
           </li>
