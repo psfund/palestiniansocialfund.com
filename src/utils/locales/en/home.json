@@ -11,6 +11,7 @@
     "raised_of": "raised of ${{goal}} goal",
     "visit_fb": "Visit their Facebook Page",
     "one_time_disclaimer": "Or if you'd like to support the fund one time, start with $5 and increment your way up to your desired amount.",
+    "processing_disclaimer": "Note: plan prices seem like arbitrary amounts because they already include the payment processing fee of 2.9% + 0.30¢.",
     "or_connect_with_us_over": "Or connect with us over",
     "github_description": "Connect with the software team.",
     "you": "You",
