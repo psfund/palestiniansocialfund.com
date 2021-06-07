@@ -178,7 +178,7 @@ export default function Sidebar(props) {
             </div>
             <div className="flex-shrink-0 flex-grow block w-full text-sm">
               <h3 className="px-4 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900">
-                Resources
+                {t("resources")}
               </h3>
               {secondaryNavigation.map((item) => (
                 <a
