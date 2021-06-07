@@ -346,6 +346,12 @@ const Home = () => {
             </a>
           </div>
         </div>
+
+        <div className="mt-1">
+          <p className="text-sm text-gray-400">
+            {t("home:processing_disclaimer")}
+          </p>
+        </div>
       </div>
 
       <div className="mx-auto py-12 max-w-7xl">
