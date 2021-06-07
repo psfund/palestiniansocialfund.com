@@ -2,5 +2,13 @@
     "psf": "The Palestinian Social Fund",
     "home": "Home",
     "philosophy": "Philosophy",
-    "track_fund": "Track Fund"
+    "track_fund": "Track Fund",
+    "stone": "Stone",
+    "slingshot": "Slingshot",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "choose": "Choose",
+    "click_here": "Click here",
+    "resources": "Resources",
+    "billing_cycle": "Billing cycle"
 }
