@@ -10,6 +10,7 @@ import {
   // FolderOpenIcon,
   XIcon,
 } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
 
 const navigation = [
   { name: "home", href: "/", icon: HomeIcon, current: false },
@@ -39,8 +40,11 @@ function classNames(...classes) {
 }
 
 export default function Sidebar(props) {
+  const { pathname } = useRouter();
   const { t } = useTranslation();
   const { sidebarOpen, setSidebarOpen } = props;
+
+  const isActive = (url) => pathname === url;
 
   return (
     <>
@@ -106,8 +110,8 @@ export default function Sidebar(props) {
                       <Link key={item.name} href={item.href}>
                         <a
                           className={classNames(
-                            item.current
-                              ? "bg-purple-50 border-purple-600 text-purple-600"
+                            isActive(item.href)
+                              ? "bg-green-50 border-green-600 text-green-600"
                               : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                             "group border-l-4 py-2 px-3 flex items-center text-base font-medium"
                           )}
@@ -163,7 +167,14 @@ export default function Sidebar(props) {
               <div className="flex-1 space-y-1">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
-                    <a className="group py-2 px-4 flex items-center text-sm font-medium hover:text-gray-900 transition-colors duration-200 text-gray-500">
+                    <a
+                      className={classNames(
+                        isActive(item.href)
+                          ? "text-gray-900"
+                          : "text-gray-500 hover:text-gray-900",
+                        "group py-2 px-4 flex items-center text-sm font-medium transition-colors duration-200"
+                      )}
+                    >
                       <div className="me-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
                         <item.icon
                           className="h-4 w-4 text-gray-600"
