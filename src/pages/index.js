@@ -22,7 +22,7 @@ const people = [
   },
   {
     name: "sami_fuller",
-    role: "social_content_producer",
+    role: "producer",
   },
   {
     name: "youcef_rahmani",
