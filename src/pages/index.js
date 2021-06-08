@@ -100,13 +100,12 @@ const Home = ({ balance }) => {
                 className={`${locale === "ar" ? "progress-bar-rtl" : ""} mt-3`}
               >
                 <Line
-                  percent="69"
+                  percent={`${balance.amount / 100 / 10000}`}
                   strokeWidth="2"
                   trailWidth="2"
                   strokeColor="#10B981"
                   trailColor="#D1FAE5"
                   strokeLinecap="square"
-                  direction="rtl"
                 />
               </div>
             </div>
@@ -414,9 +413,10 @@ const Home = ({ balance }) => {
   );
 };
 
-export const getStaticProps = async ({ locale }) => {
+export const getServerSideProps = async ({ locale }) => {
   const balance = await stripe.balance.retrieve();
   delete balance.available[0].source_types;
+  balance.available[0].amount += balance.pending[0].amount;
 
   return {
     props: {

@@ -119,9 +119,8 @@ const Fund = ({ stats, charges }) => {
   );
 };
 
-export const getStaticProps = async ({ locale }) => {
+export const getServerSideProps = async ({ locale }) => {
   const balance = await stripe.balance.retrieve();
-  delete balance.available[0].source_types;
 
   const subscriptions = await stripe.subscriptions.list();
 
@@ -137,7 +136,7 @@ export const getStaticProps = async ({ locale }) => {
     {
       name: "balance",
       stat: `${
-        balance.available[0].amount / 100
+        (balance.available[0].amount + balance.pending[0].amount) / 100
       } ${balance.available[0].currency.toUpperCase()}`,
     },
     {
