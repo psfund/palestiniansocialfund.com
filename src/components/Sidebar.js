@@ -8,6 +8,7 @@ import {
   HomeIcon,
   ScaleIcon,
   // FolderOpenIcon,
+  LightningBoltIcon,
   XIcon,
 } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
@@ -22,6 +23,12 @@ const navigation = [
   },
   // { name: "News", href: "#", icon: NewspaperIcon, current: false },
   { name: "track_fund", href: "/fund", icon: ScaleIcon, current: false },
+  {
+    name: "support_fund",
+    href: "/support",
+    icon: LightningBoltIcon,
+    current: false,
+  },
   // { name: "Open Projects", href: "#", icon: FolderOpenIcon, current: false },
 ];
 const secondaryNavigation = [
