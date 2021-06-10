@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
@@ -7,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { MainLayout } from "src/layouts";
 import { stripe } from "src/clients";
+import Plans from "src/components/Plans";
 
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -42,28 +42,9 @@ const people = [
   },
 ];
 
-const tiers = [
-  {
-    name: "stone",
-    priceMonthly: 11,
-    hrefMonhtly: "https://buy.stripe.com/4gw4kc9s4fPQ796dQR",
-    priceYearly: 104,
-    hrefYearly: "https://buy.stripe.com/4gw180cEgfPQdxudQT",
-  },
-  {
-    name: "slingshot",
-    priceMonthly: 29,
-    hrefMonhtly: "https://buy.stripe.com/3cs03W0Vy47850YeUZ",
-    priceYearly: 310,
-    hrefYearly: "https://buy.stripe.com/cN2dUM8o0dHI7969AG",
-  },
-];
-
 const Home = ({ balance }) => {
   const { t } = useTranslation();
   const { locale } = useRouter();
-
-  const [billing, setBilling] = useState("yearly");
 
   return (
     <MainLayout>
@@ -100,7 +81,7 @@ const Home = ({ balance }) => {
                 className={`${locale === "ar" ? "progress-bar-rtl" : ""} mt-3`}
               >
                 <Line
-                  percent={`${balance.amount / 100 / 10000}`}
+                  percent={`${balance.amount / 10000}`}
                   strokeWidth="2"
                   trailWidth="2"
                   strokeColor="#10B981"
@@ -120,7 +101,7 @@ const Home = ({ balance }) => {
         </div>
         <LightGallery
           speed={500}
-          elementClassNames="grid grid-flow-row grid-cols-2 md:grid-cols-4 grid-rows-1 gap-4"
+          elementClassNames="grid grid-flow-row grid-cols-2 md:grid-cols-4 grid-rows-1 gap-4 mb-5"
           plugins={[lgThumbnail, lgZoom]}
         >
           <a
@@ -167,6 +148,16 @@ const Home = ({ balance }) => {
             />
           </a>
         </LightGallery>
+        <iframe
+          src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fardkanan007%2Fposts%2F561088291492230&width=500&show_text=false&appId=1701313576784649&height=582"
+          width="500"
+          height="582"
+          style={{ border: "none", overflow: "hidden" }}
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
         <div className="mt-5">
           <Link href="https://www.facebook.com/ardkanan007/">
             <a
@@ -191,167 +182,8 @@ const Home = ({ balance }) => {
             {t("home:section_two_description_2")}
           </p>
         </div>
-        <div className="bg-white border rounded py-4 px-3">
-          <div className="max-w-7xl mx-auto bg-white">
-            {/* xs to lg */}
-            <div className="max-w-2xl mx-auto space-y-8 lg:hidden">
-              <div>
-                <label
-                  htmlFor="billing"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  {t("common:billing_cycle")}
-                </label>
-                <select
-                  id="billing"
-                  name="billing"
-                  className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm rounded-md"
-                  value={billing}
-                  onChange={(e) => setBilling(e.target.value)}
-                >
-                  <option value="monthly">{t("common:monthly")}</option>
-                  <option value="yearly">{t("common:yearly")}</option>
-                </select>
-              </div>
-              {tiers.map((tier) => (
-                <section key={tier.name}>
-                  <div className="p-4 border rounded mb-8">
-                    <h2 className="text-lg leading-6 font-medium text-gray-900">
-                      {t(`common:${tier.name}`)}
-                    </h2>
-                    <p className="mt-4">
-                      <span className="text-4xl font-extrabold text-gray-900">
-                        $
-                        {billing === "monthly"
-                          ? tier.priceMonthly
-                          : tier.priceYearly}
-                      </span>{" "}
-                      <span className="text-base font-medium text-gray-500">
-                        {billing === "monthly"
-                          ? t("common:monthly")
-                          : t("common:yearly")}
-                      </span>
-                    </p>
-                    <a
-                      href={
-                        billing === "monthly"
-                          ? tier.hrefMonhtly
-                          : tier.hrefYearly
-                      }
-                      className="mt-6 block border border-gray-800 rounded-md bg-gray-800 w-full py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
-                    >
-                      {t("common:choose")}
-                    </a>
-                  </div>
-                </section>
-              ))}
-            </div>
 
-            {/* lg+ */}
-            <div className="hidden lg:block">
-              <table className="w-full h-px table-fixed">
-                <thead>
-                  <tr>
-                    <th
-                      className={`pb-4 pe-6 text-sm font-medium text-gray-900 ${
-                        locale === "ar" ? "text-right" : "text-left"
-                      }`}
-                      scope="col"
-                    >
-                      <span> {t("common:billing_cycle")}</span>
-                    </th>
-                    {tiers.map((tier) => (
-                      <th
-                        key={tier.name}
-                        className={`w-1/3 pb-4 px-6 text-lg leading-6 font-medium text-gray-900 ${
-                          locale === "ar" ? "text-right" : "text-left"
-                        }`}
-                        scope="col"
-                      >
-                        {t(`common:${tier.name}`)}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="border-t border-gray-200 divide-y divide-gray-200">
-                  <tr>
-                    <th
-                      className="py-8 pe-6 text-sm font-medium text-gray-900 text-left align-top"
-                      scope="row"
-                    >
-                      <div>
-                        <label
-                          htmlFor="billing"
-                          className="block text-sm font-medium text-gray-700 hidden"
-                        >
-                          Billing
-                        </label>
-                        <select
-                          id="billing"
-                          name="billing"
-                          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm rounded-md"
-                          value={billing}
-                          onChange={(e) => setBilling(e.target.value)}
-                        >
-                          <option value="monthly">{t("common:monthly")}</option>
-                          <option value="yearly">{t("common:yearly")}</option>
-                        </select>
-                      </div>
-                    </th>
-                    {tiers.map((tier) => (
-                      <td
-                        key={tier.name}
-                        className="h-full py-8 px-6 align-top"
-                      >
-                        <div className="relative h-full w-full table">
-                          <p className="mb-6">
-                            <span className="text-4xl font-extrabold text-gray-900">
-                              $
-                              {billing === "monthly"
-                                ? tier.priceMonthly
-                                : tier.priceYearly}
-                            </span>{" "}
-                            <span className="text-base font-medium text-gray-500">
-                              {billing === "monthly"
-                                ? t("common:monthly")
-                                : t("common:yearly")}
-                            </span>
-                          </p>
-                          <a
-                            href={
-                              billing === "monthly"
-                                ? tier.hrefMonhtly
-                                : tier.hrefYearly
-                            }
-                            className="flex-grow block w-full bg-gray-800 border border-gray-800 rounded-md 5 py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
-                          >
-                            {t("common:choose")}
-                          </a>
-                        </div>
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="rounded bg-gray-100 text-sm text-gray-500 p-3">
-            {t("home:one_time_disclaimer")}{" "}
-            <a
-              className="underline hover:text-gray-900"
-              href="https://buy.stripe.com/3cseYQcEg4783WU7ss"
-            >
-              {t("common:click_here")}
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-1">
-          <p className="text-sm text-gray-400">
-            {t("home:processing_disclaimer")}
-          </p>
-        </div>
+        <Plans />
       </div>
 
       <div className="mx-auto py-12 max-w-7xl">
