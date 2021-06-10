@@ -91,9 +91,9 @@ const Home = ({ balance }) => {
               </div>
             </div>
             <div className="px-4 py-5 sm:p-6 ms-auto">
-              <Link href="/fund">
+              <Link href="/support">
                 <a className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                  {t("track_fund")}
+                  {t("support_fund")}
                 </a>
               </Link>
             </div>
