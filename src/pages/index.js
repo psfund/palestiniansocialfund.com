@@ -53,9 +53,9 @@ const tiers = [
   {
     name: "slingshot",
     priceMonthly: 29,
-    hrefMonhtly: "https://buy.stripe.com/8wM2c4dIk334bpmbIK",
+    hrefMonhtly: "https://buy.stripe.com/3cs03W0Vy47850YeUZ",
     priceYearly: 310,
-    hrefYearly: "https://buy.stripe.com/3cs8AsgUwcDE9heaEI",
+    hrefYearly: "https://buy.stripe.com/cN2dUM8o0dHI7969AG",
   },
 ];
 

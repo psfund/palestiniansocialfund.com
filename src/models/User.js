@@ -7,7 +7,6 @@ const UserSchema = new Schema(
   {
     email: { type: String, unique: true, required: true },
     password: { type: String, unique: true, required: true },
-    stripe: { type: Schema.Types.Mixed, default: {} },
     country: { type: String, unique: true, required: true },
     stripe: { type: Schema.Types.Mixed, default: {} },
   },
