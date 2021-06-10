@@ -16,5 +16,6 @@
     "amount": "Amount",
     "status": "Status",
     "date": "Date",
-    "paid": "Paid"
+    "paid": "Paid",
+    "support_fund": "Support Fund"
 }
