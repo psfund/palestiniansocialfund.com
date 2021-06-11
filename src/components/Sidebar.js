@@ -170,7 +170,7 @@ export default function Sidebar(props) {
                 </a>
               </Link>
             </div>
-            <div className="flex flex-col pt-16 pb-10 lg:pt-28 lg:pb-14">
+            <div className="flex flex-col pt-28 pb-10 lg:pb-14">
               <div className="flex-1 space-y-1">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
