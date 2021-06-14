@@ -59,14 +59,14 @@ const Home = ({ balance }) => {
           </p>
         </div>
         <div className="mb-5">
-          <dl className="mt-5 grid grid-cols-2 border border-gray-300 rounded bg-white items-center overflow-hidden">
+          <dl className="mt-5 grid grid-cols-1 md:grid-cols-2 border border-gray-300 rounded bg-white items-center overflow-hidden">
             <div className="px-4 py-5 sm:p-6">
               <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
                 <div className="flex items-baseline text-2xl font-semibold text-green-600">
                   ${balance.amount / 100} {balance.currency.toUpperCase()}
-                  <span className="ms-2 text-sm font-medium text-gray-500">
+                  <div className="ms-2 text-sm font-medium text-gray-500">
                     {t("home:raised_of", { goal: "10,000" })}
-                  </span>
+                  </div>
                 </div>
               </dd>
               <div
@@ -74,17 +74,17 @@ const Home = ({ balance }) => {
               >
                 <Line
                   percent={`${balance.amount / 10000}`}
-                  strokeWidth="2"
-                  trailWidth="2"
+                  strokeWidth="3"
+                  trailWidth="3"
                   strokeColor="#10B981"
                   trailColor="#D1FAE5"
                   strokeLinecap="square"
                 />
               </div>
             </div>
-            <div className="px-4 py-5 sm:p-6 ms-auto">
+            <div className="px-4 py-5 sm:p-6 md:ms-auto">
               <Link href="/support">
-                <a className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                <a className="inline-flex items-center block px-4 py-2 border border-transparent text-center font-medium rounded-md shadow-sm text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                   {t("support_fund")}
                 </a>
               </Link>
@@ -97,8 +97,8 @@ const Home = ({ balance }) => {
           height="582"
           style={{ border: "none", overflow: "hidden" }}
           scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
+          frameBorder="0"
+          allowFullScreen={true}
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         ></iframe>
       </div>
