@@ -124,7 +124,7 @@ export const getServerSideProps = async ({ locale }) => {
 
   const subscriptions = await stripe.subscriptions.list();
 
-  const charges = await stripe.charges.list();
+  const charges = await stripe.charges.list({ status: "active" });
   const cleanCharges = charges.data.map((c) => ({
     amount: c.amount,
     status: c.paid ? "paid" : "",
