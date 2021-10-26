@@ -92,7 +92,7 @@ const Home = ({ balance }) => {
           </dl>
         </div>
         <iframe
-          src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fardkanan007%2Fposts%2F561088291492230&width=500&show_text=false&appId=1701313576784649&height=582"
+          src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fardkanan007%2Fposts%2F568701784064214&show_text=true&width=500"
           width="100%"
           height="582"
           style={{ border: "none", overflow: "hidden" }}
