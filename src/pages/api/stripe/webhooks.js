@@ -2,6 +2,13 @@ import { stripe, airtable } from "src/clients";
 import moment from "moment";
 import { buffer } from "micro";
 
+// Stripe requires the raw body to construct the event.
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
 const handlePaymentIntentSucceeded = async (paymentIntent) => {
   let supporter;
   let plan;
@@ -70,12 +77,16 @@ async function handler(req, res) {
 
     try {
       event = stripe.webhooks.constructEvent(
-        buf,
+        buf.toString(),
         sig,
         process.env.STRIPE_WEBHOOK_SIGNING_SECRET
       );
+      console.log(event);
     } catch (err) {
-      return res.status(400).send(`Webhook Error: ${err.message}`);
+      // On error, log and return the error message.
+      console.log(`❌ Error message: ${err.message}`);
+      res.status(400).send(`Webhook Error: ${err.message}`);
+      return;
     }
 
     // Handle the event
@@ -120,11 +131,5 @@ async function handler(req, res) {
     res.json({ received: true });
   }
 }
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 
 export default handler;
