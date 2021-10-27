@@ -112,7 +112,7 @@ async function handler(req, res) {
           price = subscription.items.data[0].price;
         }
 
-        handlePaymentIntentSucceeded({
+        await handlePaymentIntentSucceeded({
           ...paymentIntent,
           charge: charge.id,
           fee: balanceTransaction.fee,
