@@ -15,12 +15,12 @@ import { useRouter } from "next/router";
 
 const navigation = [
   { name: "home", href: "/", icon: HomeIcon, current: false },
-  {
-    name: "philosophy",
-    href: "/philosophy",
-    icon: LightBulbIcon,
-    current: false,
-  },
+  // {
+  //   name: "philosophy",
+  //   href: "/philosophy",
+  //   icon: LightBulbIcon,
+  //   current: false,
+  // },
   // { name: "News", href: "#", icon: NewspaperIcon, current: false },
   { name: "track_fund", href: "/fund", icon: ScaleIcon, current: false },
   {
