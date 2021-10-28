@@ -28,6 +28,7 @@ const handlePaymentIntentSucceeded = async (paymentIntent) => {
     supporter = await airtable.createRecord("supporters", {
       name: customer.name,
       email: customer.email,
+      created: moment.unix(paymentIntent.created).format("YYYY-MM-DD"),
     });
   }
 
@@ -81,7 +82,6 @@ async function handler(req, res) {
         sig,
         process.env.STRIPE_WEBHOOK_SIGNING_SECRET
       );
-      console.log(event);
     } catch (err) {
       // On error, log and return the error message.
       console.log(`❌ Error message: ${err.message}`);
