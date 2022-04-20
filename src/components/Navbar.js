@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { LocaleSwitch } from ".";
-import { Fragment, useEffect, useState } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { useEffect, useState } from "react";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 
 function classNames(...classes) {
