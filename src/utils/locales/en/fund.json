@@ -1,6 +1,6 @@
 {
     "description": "A open dashboard dedicated to showing all the fund's financial activity.",
     "balance": "Balance",
-    "total_memberships": "Total Memberships",
+    "total_memberships": "Total Supporters",
     "payment": "Payment"
 }
