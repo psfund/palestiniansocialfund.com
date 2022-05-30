@@ -21,13 +21,17 @@ const Fund = () => {
 
   useEffect(() => {
     const getSummary = async () => {
-      const summary = await axios.get("/api/summary");
+      try {
+        const summary = await axios.get("/api/summary");
 
-      setBalance(summary.data.balance);
-      setSupporters(summary.data.supporters);
-      setPayments(summary.data.payments);
+        setBalance(summary.data.balance);
+        setSupporters(summary.data.supporters);
+        setPayments(summary.data.payments);
 
-      setIsLoading(false);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     getSummary();
