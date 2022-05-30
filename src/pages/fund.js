@@ -87,8 +87,12 @@ const Fund = () => {
           </div>
 
           <div className="flex flex-col">
-            <div className="mb-4">
-              <h2>{t("recent_activity")}</h2>
+            <div>
+              <div className="pb-5 border-b border-gray-200">
+                <h3 className="text-2xl leading-6 font-medium text-gray-900">
+                  Recent news
+                </h3>
+              </div>
             </div>
             <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
