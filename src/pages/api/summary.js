@@ -11,7 +11,7 @@ async function handler(req, res) {
 
       const cleanCharges = charges.data.map((c) => ({
         amount: c.amount,
-        status: c.paid ? "paid" : "",
+        status: "paid",
         date: c.created,
         currency: c.currency,
       }));
@@ -29,6 +29,7 @@ async function handler(req, res) {
         } ${balance.available[0].currency.toUpperCase()}`,
       });
     } catch (error) {
+      console.log(error);
       res.status(500).json(error);
     }
   }
