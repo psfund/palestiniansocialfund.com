@@ -5,7 +5,7 @@ import Lightbox from "react-image-lightbox";
 
 import { MainLayout } from "src/layouts";
 import { trimText } from "src/utils/helpers";
-// import posts from "src/utils/posts";
+import posts from "src/utils/posts";
 
 const Home = () => {
   const [readMore, setReadMore] = useState({});
@@ -82,7 +82,7 @@ const Home = () => {
             </div>
           </div>
           <ul role="list" className="divide-y divide-gray-200">
-            {/* {posts.map((post, postIdx) => (
+            {posts.map((post, postIdx) => (
               <li key={postIdx} className="px-4 py-10 sm:px-0">
                 <div>
                   <p className="mb-2 text-lg text-gray-900">
@@ -130,11 +130,11 @@ const Home = () => {
                   ))}
                 </ul>
               </li>
-            ))} */}
+            ))}
           </ul>
         </div>
 
-        {/* {isOpen && (
+        {isOpen && (
           <Lightbox
             mainSrc={posts[postIndex].images[photoIndex]}
             nextSrc={
@@ -162,7 +162,7 @@ const Home = () => {
               )
             }
           />
-        )} */}
+        )}
       </div>
     </MainLayout>
   );
