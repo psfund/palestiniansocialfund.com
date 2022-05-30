@@ -85,7 +85,7 @@ const Home = () => {
             {posts.map((post, postIdx) => (
               <li key={postIdx} className="px-4 py-10 sm:px-0">
                 <div>
-                  <p className="mb-2 text-lg text-gray-500">
+                  <p className="mb-2 text-lg text-gray-900">
                     {trimText(post.caption, readMore[postIdx] ? 1000 : 50)}{" "}
                     {post.caption.split(" ").length > 50 &&
                     !readMore[postIdx] ? (
@@ -97,8 +97,8 @@ const Home = () => {
                       </button>
                     ) : null}
                   </p>
-                  <p className="flex items-center mb-1 text-lg text-gray-500">
-                    <LocationMarkerIcon className="h-5 w-5 mr-1" />
+                  <p className="flex items-center mb-1 text-base text-gray-500">
+                    <LocationMarkerIcon className="h-4 w-4 mr-1" />
                     {post.location} {post.place && `/ ${post.place}`} ·{" "}
                     {post.date}
                   </p>
@@ -119,7 +119,7 @@ const Home = () => {
                         <button
                           type="button"
                           className="absolute inset-0 focus:outline-none"
-                          onClick={() => onImageClick(postIdx, photoIndex)}
+                          onClick={() => onImageClick(postIdx, imageIdx)}
                         >
                           <span className="sr-only">
                             View details for {imageIdx}
