@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ArrowSmUpIcon } from "@heroicons/react/solid";
+import BarLoader from "react-spinners/BarLoader";
 import { useRouter } from "next/router";
 import moment from "moment";
 import axios from "axios";
@@ -48,14 +48,23 @@ const Fund = () => {
         </p>
       </div>
 
-      {isLoading && <p className="text-gray-500">Loading recent activity...</p>}
+      <BarLoader
+        color="#000"
+        loading={isLoading}
+        css={{
+          display: "block",
+          margin: "0 auto",
+        }}
+        height={4}
+        width={100}
+      />
 
       {!isLoading && (
         <>
           <div className="mb-8">
             <dl className="grid grid-cols-1 rounded bg-white overflow-hidden border border-gray-300 divide-y divide-gray-200 md:grid-cols-2 md:divide-y-0 md:divide-x">
               <div className="px-4 py-5 sm:p-6">
-                <dt className="text-base font-normal text-gray-900">
+                <dt className="text-lg font-normal text-gray-900">
                   {t(`fund:balance`)}
                 </dt>
                 <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
@@ -93,14 +102,6 @@ const Fund = () => {
                             locale === "ar" ? "text-right" : "text-left"
                           } text-xs font-medium text-gray-500 uppercase tracking-wider`}
                         >
-                          {t("transaction")}
-                        </th>
-                        <th
-                          scope="col"
-                          className={`px-6 py-3 ${
-                            locale === "ar" ? "text-right" : "text-left"
-                          } text-xs font-medium text-gray-500 uppercase tracking-wider`}
-                        >
                           {t("amount")}
                         </th>
                         <th
@@ -124,13 +125,6 @@ const Fund = () => {
                     <tbody className="bg-white divide-y divide-gray-200">
                       {payments.map((payment, paymentIdx) => (
                         <tr key={paymentIdx}>
-                          <td className="flex px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                            <ArrowSmUpIcon
-                              className="me-2 flex-shrink-0 self-center h-5 w-5 bg-green-100 text-green-600 rounded-full"
-                              aria-hidden="true"
-                            />
-                            {t("fund:payment")}
-                          </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                             {payment.amount / 100}{" "}
                             {payment.currency.toUpperCase()}
