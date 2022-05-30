@@ -1,7 +1,35 @@
+import { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { LocationMarkerIcon } from "@heroicons/react/solid";
+import Lightbox from "react-image-lightbox";
+
 import { MainLayout } from "src/layouts";
+import { trimText } from "src/utils/helpers";
+import posts from "src/utils/posts";
 
 const Home = () => {
+  const [readMore, setReadMore] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+  const [postIndex, setPostIndex] = useState(0);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
+  const onReadMoreClick = (id) => {
+    console.log(id);
+    if (readMore[id]) {
+      const newReadMore = { ...readMore };
+      delete newReadMore[id];
+      setReadMore({ ...newReadMore });
+    } else {
+      setReadMore({ ...readMore, [id]: true });
+    }
+  };
+
+  const onImageClick = (postIdx, photoIdx) => {
+    setPostIndex(postIdx);
+    setPhotoIndex(photoIdx);
+    setIsOpen(true);
+  };
+
   return (
     <MainLayout>
       <div className="mx-auto max-w-7xl">
@@ -44,6 +72,97 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <div className="mt-20">
+          <div>
+            <div className="pb-5 border-b border-gray-200">
+              <h3 className="text-2xl leading-6 font-medium text-gray-900">
+                Recent news
+              </h3>
+            </div>
+          </div>
+          <ul role="list" className="divide-y divide-gray-200">
+            {posts.map((post, postIdx) => (
+              <li key={postIdx} className="px-4 py-10 sm:px-0">
+                <div>
+                  <p className="mb-2 text-lg text-gray-500">
+                    {trimText(post.caption, readMore[postIdx] ? 1000 : 50)}{" "}
+                    {post.caption.split(" ").length > 50 &&
+                    !readMore[postIdx] ? (
+                      <button
+                        className="text-sm underline cursor-pointer"
+                        onClick={() => onReadMoreClick(postIdx)}
+                      >
+                        read more
+                      </button>
+                    ) : null}
+                  </p>
+                  <p className="flex items-center mb-1 text-lg text-gray-500">
+                    <LocationMarkerIcon className="h-5 w-5 mr-1" />
+                    {post.location} {post.place && `/ ${post.place}`} ·{" "}
+                    {post.date}
+                  </p>
+                </div>
+
+                <ul
+                  role="list"
+                  className="mt-4 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+                >
+                  {post.images.map((image, imageIdx) => (
+                    <li key={imageIdx} className="relative">
+                      <div className="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden">
+                        <img
+                          src={image}
+                          alt=""
+                          className="group-hover:opacity-75 object-cover pointer-events-none"
+                        />
+                        <button
+                          type="button"
+                          className="absolute inset-0 focus:outline-none"
+                          onClick={() => onImageClick(postIdx, photoIndex)}
+                        >
+                          <span className="sr-only">
+                            View details for {imageIdx}
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {isOpen && (
+          <Lightbox
+            mainSrc={posts[postIndex].images[photoIndex]}
+            nextSrc={
+              posts[postIndex].images[
+                (photoIndex + 1) % posts[postIndex].images.length
+              ]
+            }
+            prevSrc={
+              posts[postIndex].images[
+                (photoIndex + posts[postIndex].images.length - 1) %
+                  posts[postIndex].images.length
+              ]
+            }
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex(
+                (photoIndex + posts[postIndex].images.length - 1) %
+                  posts[postIndex].images.length
+              )
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex(
+                (photoIndex + posts[postIndex].images.length + 1) %
+                  posts[postIndex].images.length
+              )
+            }
+          />
+        )}
       </div>
     </MainLayout>
   );
