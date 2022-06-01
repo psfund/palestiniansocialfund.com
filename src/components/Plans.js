@@ -39,7 +39,7 @@ export default function Plans() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
           <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">
-            Support the fund
+            Support the farms
           </h1>
           <p className="mt-5 text-xl text-gray-500 sm:text-center">
             Your support, big or small, matters.
