@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 
 function classNames(...classes) {
@@ -89,8 +89,9 @@ export default function Navbar() {
                   <LocaleSwitch />
                 </div> */}
                 <Link href="/support">
-                  <a className="inline-block bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
-                    Support Fund
+                  <a className="flex items-center bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
+                    Support
+                    <ArrowRightIcon className="ms-2 h-4 w-4" />
                   </a>
                 </Link>
               </div>
