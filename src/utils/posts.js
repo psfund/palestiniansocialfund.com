@@ -3,7 +3,7 @@ const posts = [
     place: "Ikhlia Women's Cooperative",
     location: "Sahl Al Baqee'a",
     caption:
-      "This melon we planted 3 months ago through youth volunteer work with the Ikhlia Women's Cooperative, in Sahel Al Baqee'a in the Jordan Valley. And now it is ready to be picked and eaten!",
+      "We planted these melons 3 months ago through youth volunteer work with the Ikhlia Women's Cooperative, in Sahel Al Baqee'a in the Jordan Valley. And now it is ready to be picked and eaten!",
     images: [
       "https://i.postimg.cc/SNQKGSfm/285989059-10159291957052606-8113563037643351342-n.jpg",
       "https://i.postimg.cc/KcDzLkL9/286067881-10159291956912606-8415188600717480438-n.jpg",
