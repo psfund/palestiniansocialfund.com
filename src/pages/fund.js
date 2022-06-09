@@ -5,6 +5,7 @@ import BarLoader from "react-spinners/BarLoader";
 import { useRouter } from "next/router";
 import moment from "moment";
 import axios from "axios";
+import Head from "next/head";
 
 import { MainLayout } from "src/layouts";
 
@@ -39,6 +40,10 @@ const Fund = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Track fund | Palestinian Social Fund</title>
+      </Head>
+
       <div className="pb-12">
         <h1 className="text-5xl leading-none font-extrabold text-gray-900 tracking-tight mb-4">
           {t("track_fund")}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 import Lightbox from "react-image-lightbox";
+import Head from "next/head";
 
 import { MainLayout } from "src/layouts";
 import { trimText } from "src/utils/helpers";
@@ -32,6 +33,10 @@ const Home = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Home | Palestinian Social Fund</title>
+      </Head>
+
       <div className="mx-auto max-w-7xl">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">

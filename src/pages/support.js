@@ -5,6 +5,10 @@ import Plans from "src/components/Plans";
 const Philosophy = () => {
   return (
     <MainLayout>
+      <Head>
+        <title>Support the farms | Palestinian Social Fund</title>
+      </Head>
+
       <Plans />
     </MainLayout>
   );
