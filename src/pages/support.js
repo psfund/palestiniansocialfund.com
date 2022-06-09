@@ -1,5 +1,7 @@
 import { MainLayout } from "src/layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from "next/head";
+
 import Plans from "src/components/Plans";
 
 const Philosophy = () => {
