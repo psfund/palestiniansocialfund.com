@@ -1,5 +1,19 @@
 const posts = [
   {
+    place: "Manarat Al Ard",
+    location: "Erak Burin",
+    caption:
+      "A new youth cooperative consisting of 5 younths, called Manarat Al Ard (Beacon of the Land) in the village of Erak Burin, Nablus. The cooperative's products: thyme, vegetables, and poultry. The aim of the cooperative is to protect the lands near the Har Bracha settlement that are threatened with confiscation as well as to create job opportunities for youth who reject working in the settlements.",
+    images: [
+      "https://i.postimg.cc/xTnJcs1j/287220234-10159302690387606-8076509017061633341-n.jpg",
+      "https://i.postimg.cc/W1fhYT6t/285672508-10159302668952606-7514674828662513273-n.jpg",
+      "https://i.postimg.cc/Dy6WsqSr/285707692-10159302669337606-701795955827668229-n.jpg",
+      "https://i.postimg.cc/BnvjCXFd/286044163-10159302669242606-2393378148489907683-n.jpg",
+    ],
+    url: "https://www.facebook.com/rami.massad.5/posts/10159302668872606",
+    date: "10-06-2022",
+  },
+  {
     place: "Ikhlia Women's Cooperative",
     location: "Sahl Al Baqee'a",
     caption:
