@@ -7,7 +7,7 @@ const posts = [
       35 people representing 11 agricultural cooperatives and associations from Tulkarm, Jenin, Nablus and Ramallah participated in the visit, as part of the forum's aims to promote mutual learning through scientific practices on the ground.
       The visit included getting acquainted with the farm and its establishment, and then a field tour to identify the sections of the farm, such as the cultivated land and diversity of products, seedling incubator, and compost workshop, followed by a dialogue between the group on several issues: ecological agriculture, planning harvests, marketing etc.
       The cooperative groups and the participating farms are: Roots of the Sun (جذور الشمس) from Tulkarm, the Land & Cultivation (أرض وزرع) cooperative in the villages of Burin and Beit Furik, Lovers of the Land (عشاق الأرض), Surra (صرة) cooperative, Hope (الأمل) cooperative, and Bayta (بيتا) cooperative from Nablus governorate.
-      The Land is Ours (الأرض لنا) cooperative from Araba/Jenin, the Land of Despair (أرض اليأس), the Land of the Farmers (أرض الفلاحين) and the farms of Garden of Joy (حاكورة الفرح) and The Farmer (الفلاح), and the Al-Mughayer Cooperative Association (جمعية المغير التعاونية) from Ramallah`,
+      The Land is Ours (الأرض لنا) cooperative from Araba/Jenin, the Land of Despair (أرض اليأس), the Land of the Farmers (أرض الفلاحين) and the farms of Garden of Joy (حاكورة الفرح) and The Farmer (الفلاح), and the Al-Mughayer Cooperative Association (جمعية المغير التعاونية) from Ramallah.`,
     images: [
       "https://i.postimg.cc/C15fkrGR/297433633-1644032339315365-3697017551391315846-n.jpg",
       "https://i.postimg.cc/KYZTv84r/297449083-1644032549315344-1507451941889944709-n.jpg",
