@@ -1,5 +1,25 @@
 const posts = [
   {
+    place: "Om Sleiman",
+    location: "Bil'in",
+    caption:
+      `The Youth Partnership Forum organized a field visit to Om Sleiman Farm in Bil’in village as a distinguished agricultural model specialized in ecological and community-supported agriculture within the “Falahoun Mutajawilun” (Roaming Farmers) initiative.
+      35 people representing 11 agricultural cooperatives and associations from Tulkarm, Jenin, Nablus and Ramallah participated in the visit, as part of the forum's aims to promote mutual learning through scientific practices on the ground.
+      The visit included getting acquainted with the farm and its establishment, and then a field tour to identify the sections of the farm, such as the cultivated land and diversity of products, seedling incubator, and compost workshop, followed by a dialogue between the group on several issues: ecological agriculture, planning harvests, marketing etc.
+      The cooperative groups and the participating farms are: Roots of the Sun (جذور الشمس) from Tulkarm, the Land & Cultivation (أرض وزرع) cooperative in the villages of Burin and Beit Furik, Lovers of the Land (عشاق الأرض), Surra (صرة) cooperative, Hope (الأمل) cooperative, and Bayta (بيتا) cooperative from Nablus governorate.
+      The Land is Ours (الأرض لنا) cooperative from Araba/Jenin, the Land of Despair (أرض اليأس), the Land of the Farmers (أرض الفلاحين) and the farms of Garden of Joy (حاكورة الفرح) and The Farmer (الفلاح), and the Al-Mughayer Cooperative Association (جمعية المغير التعاونية) from Ramallah`,
+    images: [
+      "https://i.postimg.cc/C15fkrGR/297433633-1644032339315365-3697017551391315846-n.jpg",
+      "https://i.postimg.cc/KYZTv84r/297449083-1644032549315344-1507451941889944709-n.jpg",
+      "https://i.postimg.cc/dQXGmFSw/297457126-1644031689315430-4840417361655360996-n.jpg",
+      "https://i.postimg.cc/XYKFbCNY/297505893-1644032712648661-4964827238063722453-n.jpg",
+      "https://i.postimg.cc/tTcn5dk2/297525106-1644031942648738-2150236696387622110-n.jpg",
+      "https://i.postimg.cc/wB0mtYmK/297548152-1644032182648714-1416763138750859195-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid0qdTTWcYVUzderuHM4KibhFfp5uCDef7GF3Ghzq6Lm3rLEMuDeA4J6ete5DoUTLyEl",
+    date: "04-08-2022",
+  },
+  {
     place: "Manarat Al Ard",
     location: "Erak Burin",
     caption:
@@ -36,7 +56,7 @@ const posts = [
       "https://i.postimg.cc/02fCLL9f/279965504-1581039658947967-3759022604806509296-n.jpg",
       "https://i.postimg.cc/RV9RpMxh/280080653-1581039958947937-2078416217724152718-n.jpg",
     ],
-    url: "https://www.facebook.com/FADOC1721/posts/1581039465614653",
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid0zk9H6xrZZSRFqxuAww1MVQBySUpPMUA1pQZx2Eh1YQ8KFeggMGg2Xp1huRSZt2Dcl",
     date: "22-05-2022",
   },
   {
