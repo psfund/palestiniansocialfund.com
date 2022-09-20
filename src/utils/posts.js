@@ -59,7 +59,7 @@ const posts = [
       "https://i.postimg.cc/wB0mtYmK/297548152-1644032182648714-1416763138750859195-n.jpg",
     ],
     url: "https://www.facebook.com/FADOC1726/posts/pfbid0qdTTWcYVUzderuHM4KibhFfp5uCDef7GF3Ghzq6Lm3rLEMuDeA4J6ete5DoUTLyEl",
-    date: "17-09-2022",
+    date: "04-08-2022",
   },
   {
     place: "Manarat Al Ard",
