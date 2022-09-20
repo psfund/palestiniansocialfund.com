@@ -1,5 +1,47 @@
 const posts = [
   {
+    place: "",
+    location: "Ramallah",
+    caption:
+      `The Youth Partnership Forum organized the "Cooperative Work" camp (مخيم العمل التعاوني), with the participation
+      of more than 50 participants representing 17 youth and women's cooperative groups and associations
+      from different municipalities of the country. The goal of the camp is to provide a space for dialogue,
+      mutual learning and teamwork between the participating cooperatives upon 4 main axes: identity and
+      cooperative thought, internal documentation of operations, marketing, joint work and inter-cooperation across
+      cooperatives. The camp came out with general conceptions and frameworks for visions and plans to enhance
+      these four fronts as important collective economic and social forces in the Palestinian context with its national,
+      economic and social dimensions. The Palestinian Social Fund also participated in the camp by sending one our volunteers
+      to the camp in Palestine as well as ran a teach-in over Zoom about the Mondragon cooperative in Basque Country, Spain.`,
+    images: [
+      "https://i.postimg.cc/pdwSJ7bJ/306945929-1675632482822017-7851880098814908123-n.jpg",
+      "https://i.postimg.cc/d1J2Fm8K/306272624-1675632952821970-395091101568005329-n.jpg",
+      "https://i.postimg.cc/50pw2Y3Q/306962969-1675632666155332-2256038161871965453-n.jpg",
+      "https://i.postimg.cc/SNRGjrHS/307146808-1675631926155406-5955049779010613668-n.jpg",
+      "https://i.postimg.cc/bw2H9vz4/307319525-1675632096155389-2320715834229705655-n.jpg",
+      "https://i.postimg.cc/k5QQLhRc/307438092-1675631959488736-7299685298912982194-n.jpg",
+      "https://i.postimg.cc/TYsJbbXr/307462731-1675632002822065-29285436108619844-n.jpg",
+      "https://i.postimg.cc/Bv95YGbb/307465587-1675632142822051-4080052186379413739-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid02VjtboTae2R1VsxbVU8az2xFo81iq7nxUyVpyrbByQXhvkiXtkNe5QC37AYy2ouQhl",
+    date: "29-08-2022",
+  },
+  {
+    place: "",
+    location: "Beit Duqqu",
+    caption:
+      `Solidarity campaign for Beit Duqqu grape farmers—on its third day, 70 cartons of grapes were purchased, to bring
+      the total to 200 cartons (1000 kg of grapes) that were distributed across 60 families in need and a group of women
+      who make food products (malban and molasses - ملبن و دبس).
+      Thank you to the everyone's support in raising our community and protecting it,
+      thank you Sea Star Association (جمعية نجم الحر) for reaching the families, thank you Beit Liqya Cooperative Society
+      (جمعية بيت لقيا التعاونية الزراعية) for coordinating with the farmers and handling transportation.`,
+    images: [
+      "https://i.postimg.cc/2S5VF9rJ/301151194-1661547420897190-5756956618197506590-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid02fZRQZcARK1dha9yhPLJKYCtdyeWMdieoQMw9GJzsqGQRpJ7Kvz2DzdZkb5YwACWwl",
+    date: "29-08-2022",
+  },
+  {
     place: "Om Sleiman",
     location: "Bil'in",
     caption:
