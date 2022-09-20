@@ -23,7 +23,7 @@ const posts = [
       "https://i.postimg.cc/Bv95YGbb/307465587-1675632142822051-4080052186379413739-n.jpg",
     ],
     url: "https://www.facebook.com/FADOC1726/posts/pfbid02VjtboTae2R1VsxbVU8az2xFo81iq7nxUyVpyrbByQXhvkiXtkNe5QC37AYy2ouQhl",
-    date: "29-08-2022",
+    date: "17-09-2022",
   },
   {
     place: "",
