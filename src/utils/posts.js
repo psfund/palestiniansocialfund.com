@@ -10,8 +10,8 @@ const posts = [
       cooperative thought, internal documentation of operations, marketing, joint work and inter-cooperation across
       cooperatives. The camp came out with general conceptions and frameworks for visions and plans to enhance
       these four fronts as important collective economic and social forces in the Palestinian context with its national,
-      economic and social dimensions. The Palestinian Social Fund also participated in the camp by sending one our volunteers
-      to the camp in Palestine as well as ran a teach-in over Zoom about the Mondragon cooperative in Basque Country, Spain.`,
+      economic and social dimensions. The Palestinian Social Fund also participated by sending one of our volunteers
+      to the camp in Palestine as well as running a teach-in over Zoom about the Mondragon cooperative in Basque Country, Spain.`,
     images: [
       "https://i.postimg.cc/pdwSJ7bJ/306945929-1675632482822017-7851880098814908123-n.jpg",
       "https://i.postimg.cc/d1J2Fm8K/306272624-1675632952821970-395091101568005329-n.jpg",
