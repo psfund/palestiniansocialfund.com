@@ -4,7 +4,7 @@ import Head from "next/head";
 
 import Plans from "src/components/Plans";
 
-const Philosophy = () => {
+const Support = () => {
   return (
     <MainLayout>
       <Head>
@@ -22,4 +22,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default Philosophy;
+export default Support;
