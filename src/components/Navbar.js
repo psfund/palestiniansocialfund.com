@@ -74,7 +74,7 @@ export default function Navbar() {
                     href="https://docs.google.com/spreadsheets/d/1ge-Yg_FrUOwh38ftHkuJEowjZepxKJFO1XpF7bF5x1c/edit?usp=sharing"
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    Milestones
+                    Resources & Milestones
                   </a>
                   <a
                     href="mailto:psfund@pm.me"
@@ -130,7 +130,7 @@ export default function Navbar() {
                 href="https://psfund.notion.site/35b1c59f568c4e68bb64fe38d0508c01?v=1d71309e31a64436901f756750e082bf"
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               >
-                Milestones
+                Resources & Milestones
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"

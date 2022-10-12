@@ -83,7 +83,7 @@ export default function Plans() {
               )}
             >
               <div className="p-6">
-                <h2 className="flex items-center text-lg font-bold capitalize leading-6 font-medium text-gray-900">
+                <h2 className="flex items-center text-lg capitalize leading-6 font-medium text-gray-900">
                   {tier.name === "student" && (
                     <AcademicCapIcon className="h-8 w-8 mr-1" />
                   )}
