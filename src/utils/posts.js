@@ -3,7 +3,7 @@ const posts = [
     place: "",
     location: "Ramallah",
     caption:
-      `The Youth Partnership Forum organized the "Cooperative Work" camp (مخيم العمل التعاوني), with the participation
+      `The Partnership Youth Forum organized the "Cooperative Work" camp (مخيم العمل التعاوني), with the participation
       of more than 50 participants representing 17 youth and women's cooperative groups and associations
       from different municipalities of the country. The goal of the camp is to provide a space for dialogue,
       mutual learning and teamwork between the participating cooperatives upon 4 main axes: identity and
@@ -45,7 +45,7 @@ const posts = [
     place: "Om Sleiman",
     location: "Bil'in",
     caption:
-      `The Youth Partnership Forum organized a field visit to Om Sleiman Farm in Bil’in village as a distinguished agricultural model specialized in ecological and community-supported agriculture within the “Falahoun Mutajawilun” (Roaming Farmers) initiative.
+      `The Partnership Youth Forum organized a field visit to Om Sleiman Farm in Bil’in village as a distinguished agricultural model specialized in ecological and community-supported agriculture within the “Falahoun Mutajawilun” (Roaming Farmers) initiative.
       35 people representing 11 agricultural cooperatives and associations from Tulkarm, Jenin, Nablus and Ramallah participated in the visit, as part of the forum's aims to promote mutual learning through scientific practices on the ground.
       The visit included getting acquainted with the farm and its establishment, and then a field tour to identify the sections of the farm, such as the cultivated land and diversity of products, seedling incubator, and compost workshop, followed by a dialogue between the group on several issues: ecological agriculture, planning harvests, marketing etc.
       The cooperative groups and the participating farms are: Roots of the Sun (جذور الشمس) from Tulkarm, the Land & Cultivation (أرض وزرع) cooperative in the villages of Burin and Beit Furik, Lovers of the Land (عشاق الأرض), Surra (صرة) cooperative, Hope (الأمل) cooperative, and Bayta (بيتا) cooperative from Nablus governorate.
