@@ -1,20 +1,10 @@
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-import { AcademicCapIcon } from "@heroicons/react/outline";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const tiers = [
-  {
-    name: "student",
-    priceMonthly: 6,
-    hrefMonhtly: "https://buy.stripe.com/fZe4kc1ZCcDE3WU008",
-    priceYearly: 65,
-    hrefYearly: "https://buy.stripe.com/dR6g2U6fSbzA796fZ5",
-  },
   {
     name: "seed",
     priceMonthly: 15,
@@ -72,6 +62,26 @@ export default function Plans() {
           </div>
         </div>
         <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3">
+          <div
+            className="bg-gray-50 rounded-lg shadow-sm divide-y divide-gray-200"
+          >
+            <div className="p-6">
+              <h2 className="flex items-center text-lg leading-6 font-medium text-gray-900">
+                One-time
+              </h2>
+              <p className="mt-8">
+                <span className="text-4xl font-extrabold text-gray-900">
+                  $x USD
+                </span>
+              </p>
+              <a
+                href="https://donate.stripe.com/7sIdUM6fS3348da28l"
+                className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
+              >
+                Support
+              </a>
+            </div>
+          </div>
           {tiers.map((tier) => (
             <div
               key={tier.name}
@@ -84,9 +94,6 @@ export default function Plans() {
             >
               <div className="p-6">
                 <h2 className="flex items-center text-lg capitalize leading-6 font-medium text-gray-900">
-                  {tier.name === "student" && (
-                    <AcademicCapIcon className="h-8 w-8 mr-1" />
-                  )}
                   {tier.name}
                 </h2>
                 <p className="mt-4 text-sm text-gray-500">{tier.description}</p>
