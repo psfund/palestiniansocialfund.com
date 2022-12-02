@@ -88,11 +88,9 @@ export default function Navbar() {
                 {/* <div>
                   <LocaleSwitch />
                 </div> */}
-                <Link href="/support">
-                  <a className="flex items-center bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
-                    Support
-                    <ArrowRightIcon className="ms-2 h-4 w-4" />
-                  </a>
+                <Link className="flex items-center bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75" href="/support">
+                  Support
+                  <ArrowRightIcon className="ms-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -166,22 +164,18 @@ export default function Navbar() {
               <span className="sr-only">Palestinian Social Fund</span>
               <div className="flex-shrink-0 pe-3 flex items-center">
                 <Link href="/">
-                  <a>
-                    <img
-                      className="h-10 w-auto"
-                      src="/logo.svg"
-                      alt="Palestinian Social Fund"
-                    />
-                  </a>
+                  <img
+                    className="h-10 w-auto"
+                    src="/logo.svg"
+                    alt="Palestinian Social Fund"
+                  />
                 </Link>
               </div>
             </div>
             <div className="hidden ms-10 space-x-8 lg:block">
               {navigation.map((link) => (
-                <Link className="md:me-2" key={link.name} href={link.href}>
-                  <a className="text-base underline font-medium hover:opacity-75">
-                    {link.name}
-                  </a>
+                <Link className="text-base underline font-medium hover:opacity-75 md:me-2" key={link.name} href={link.href}>
+                  {link.name}
                 </Link>
               ))}
             </div>
@@ -190,19 +184,15 @@ export default function Navbar() {
             {/* <div>
               <LocaleSwitch />
             </div> */}
-            <Link href="/support">
-              <a className="inline-block bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
-                Support Fund
-              </a>
+            <Link className="inline-block bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75" href="/support">
+              Support Fund
             </Link>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 border-b lg:hidden">
           {navigation.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a className="text-base underline font-medium hover:opacity-75">
-                {link.name}
-              </a>
+            <Link className="text-base underline font-medium hover:opacity-75" key={link.name} href={link.href}>
+              {link.name}
             </Link>
           ))}
         </div>

@@ -114,21 +114,21 @@ export default function Sidebar(props) {
                 <nav className="h-full flex flex-col">
                   <div className="space-y-1">
                     {navigation.map((item) => (
-                      <Link key={item.name} href={item.href}>
-                        <a
-                          className={classNames(
-                            isActive(item.href)
-                              ? "bg-green-50 border-green-600 text-green-600"
-                              : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                            "group border-l-4 py-2 px-3 flex items-center text-base font-medium"
-                          )}
-                        >
-                          <item.icon
-                            className="text-gray-400 group-hover:text-gray-500 me-4 h-6 w-6"
-                            aria-hidden="true"
-                          />
-                          {t(item.name)}
-                        </a>
+                      <Link
+                        className={classNames(
+                          isActive(item.href)
+                            ? "bg-green-50 border-green-600 text-green-600"
+                            : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                          "group border-l-4 py-2 px-3 flex items-center text-base font-medium"
+                        )}
+                        key={item.name}
+                        href={item.href}
+                      >
+                        <item.icon
+                          className="text-gray-400 group-hover:text-gray-500 me-4 h-6 w-6"
+                          aria-hidden="true"
+                        />
+                        {t(item.name)}
                       </Link>
                     ))}
                   </div>
@@ -161,35 +161,33 @@ export default function Sidebar(props) {
           <nav className="pb-4 flex flex-col flex-grow overflow-y-auto">
             <div className="flex-shrink-0 px-4 flex items-center absolute t-0 bg-white h-20">
               <Link href="/">
-                <a>
-                  <img
-                    className="h-10 w-auto"
-                    src="/logo.svg"
-                    alt="Palestinian Social Fund"
-                  />
-                </a>
+                <img
+                  className="h-10 w-auto"
+                  src="/logo.svg"
+                  alt="Palestinian Social Fund"
+                />
               </Link>
             </div>
             <div className="flex flex-col pt-28 pb-10 lg:pb-14">
               <div className="flex-1 space-y-1">
                 {navigation.map((item) => (
-                  <Link key={item.name} href={item.href}>
-                    <a
-                      className={classNames(
-                        isActive(item.href)
-                          ? "text-gray-900"
-                          : "text-gray-500 hover:text-gray-900",
-                        "group py-2 px-4 flex items-center text-sm font-medium transition-colors duration-200"
-                      )}
-                    >
-                      <div className="me-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
-                        <item.icon
-                          className="h-4 w-4 text-gray-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      {t(item.name)}
-                    </a>
+                  <Link
+                    className={classNames(
+                      isActive(item.href)
+                        ? "text-gray-900"
+                        : "text-gray-500 hover:text-gray-900",
+                      "group py-2 px-4 flex items-center text-sm font-medium transition-colors duration-200"
+                    )}
+                    key={item.name}
+                    href={item.href}
+                  >
+                    <div className="me-3 p-1 rounded-md bg-gradient-to-br from-gray-200 to-gray-200">
+                      <item.icon
+                        className="h-4 w-4 text-gray-600"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    {t(item.name)}
                   </Link>
                 ))}
               </div>
