@@ -51,24 +51,35 @@ const Home = () => {
             <div className="bg-white sm:w-full sm:mx-auto sm:rounded-md sm:overflow-hidden">
               <div className="flex-1 p-4 border rounded-md border-gray-300">
                 <p className="text-2xl tracking-tight font-medium border-r-2 border-gray-50 mb-3">
-                  The Palestinian Social Fund aims to financially support the
-                  initiatives of Palestinian cooperative farms.
+                  The Palestinian Social Fund continuously raises money to support
+                  Palestinian cooperative farms.
                 </p>
-                <ul className="ps-3 list-disc list-inside">
-                  <li className="text-lg mb-2 tracking-tight">
+                <p className="mt-6 text-base">
+                  We believe the Palestinian diaspora has an integral role to play in achieving
+                  food sovereignty and breaking the dependency on foreign aid and the occupation.
+                </p>
+                <p className="mt-3 text-base">
+                  The PSF is way for us to materially support farming cooperatives
+                  as <em>"there can be no liberation without sovereignty over our daily bread."</em>
+                </p>
+                <p className="mt-3 text-base">
+                  We're a volunteer-run non-profit with clear values:
+                </p>
+                <ul className="mt-3 ps-3 list-disc list-inside">
+                  <li className="text-base mb-2 tracking-tight">
                     We don’t take salaries.{" "}
                   </li>
-                  <li className="text-lg mb-2 tracking-tight">
+                  <li className="text-base mb-2 tracking-tight">
                     We don’t accept conditions.{" "}
                   </li>
-                  <li className="text-lg mb-2 tracking-tight">
+                  <li className="text-base mb-2 tracking-tight">
                     We don’t make conditions.{" "}
                   </li>
-                  <li className="text-lg mb-2 tracking-tight">
+                  <li className="text-base mb-2 tracking-tight">
                     We don’t take money from organizations or big donors.{" "}
                   </li>
-                  <li className="text-lg mb-2 tracking-tight">
-                    Our fund’s success will be determined by the people’s
+                  <li className="text-base mb-2 tracking-tight">
+                    We believe the fund’s success will be determined by the people’s
                     solidarity.
                   </li>
                 </ul>
