@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 import Lightbox from "react-image-lightbox";
 import Head from "next/head";
@@ -90,7 +89,7 @@ const Home = () => {
             {posts.map((post, postIdx) => (
               <li key={postIdx} className="px-4 py-10 sm:px-0">
                 <div>
-                  <p className="mb-2 text-lg text-gray-900">
+                  <div className="mb-2 text-lg text-gray-900">
                     <div dangerouslySetInnerHTML={{ __html: trimText(post.caption, readMore[postIdx] ? 1000 : 50) }} />
                     {" "}
                     {post.caption.split(" ").length > 50 &&
@@ -102,7 +101,7 @@ const Home = () => {
                         read more
                       </button>
                     ) : null}
-                  </p>
+                  </div>
                   <p className="flex items-center mb-1 text-base text-gray-500">
                     <LocationMarkerIcon className="h-4 w-4 mr-1" />
                     {post.location} {post.place && `/ ${post.place}`} ·{" "}
@@ -172,14 +171,6 @@ const Home = () => {
       </div>
     </MainLayout>
   );
-};
-
-export const getServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "home"])),
-    },
-  };
 };
 
 export default Home;
