@@ -51,15 +51,10 @@ const Home = () => {
             <div className="bg-white sm:w-full sm:mx-auto sm:rounded-md sm:overflow-hidden">
               <div className="flex-1 p-4 border rounded-md border-gray-300">
                 <p className="text-2xl tracking-tight font-medium border-r-2 border-gray-50 mb-3">
-                  The Palestinian Social Fund raises unconditional financial support for
-                  Palestinian cooperative farms.
-                </p>
-                <p className="mt-6 text-base">
-                  We believe the Palestinian diaspora has an integral role to play in achieving
-                  food sovereignty and breaking the dependency on foreign aid and the occupation.
+                  The Palestinian Social Fund aims to financially support Palestinian cooperative farms.
                 </p>
                 <p className="mt-3 text-base">
-                  The PSF is way for us to materially support farming cooperatives
+                  The PSF is way for us to raise money for farming cooperatives
                   as <em>"there can be no liberation without sovereignty over our daily bread."</em>
                 </p>
                 <p className="mt-3 text-base">
