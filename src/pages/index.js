@@ -51,7 +51,7 @@ const Home = () => {
             <div className="bg-white sm:w-full sm:mx-auto sm:rounded-md sm:overflow-hidden">
               <div className="flex-1 p-4 border rounded-md border-gray-300">
                 <p className="text-2xl tracking-tight font-medium border-r-2 border-gray-50 mb-3">
-                  The Palestinian Social Fund continuously raises money to support
+                  The Palestinian Social Fund raises unconditional financial support for
                   Palestinian cooperative farms.
                 </p>
                 <p className="mt-6 text-base">
