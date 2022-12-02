@@ -91,7 +91,8 @@ const Home = () => {
               <li key={postIdx} className="px-4 py-10 sm:px-0">
                 <div>
                   <p className="mb-2 text-lg text-gray-900">
-                    {trimText(post.caption, readMore[postIdx] ? 1000 : 50)}{" "}
+                    <div dangerouslySetInnerHTML={{ __html: trimText(post.caption, readMore[postIdx] ? 1000 : 50) }} />
+                    {" "}
                     {post.caption.split(" ").length > 50 &&
                     !readMore[postIdx] ? (
                       <button
