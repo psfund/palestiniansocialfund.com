@@ -1,6 +1,68 @@
 const posts = [
   {
     place: "",
+    location: "Thababa",
+    caption:
+      `The Popular Art Centre (مركز الفن الشعبي) organized an educational visit to the cooperatives working in a seed nusery, with the participation of the Rummana cooperative (تعونية رمانة) from Saffa village (قرية صفا), the Land and Plants cooperative - Roots nursery (تعاونية أرض وزرع - مشتل جذور) from Beit Furik (بيت فوريك), the Retaj Women's Cooperative (تعاونية رتاج النسوية) and the cooperatives in Western Ramallah, the Land of Despair (أرض اليأس) and the Land of the Fallaheen (أرض الفلاحين) and the Fallah's farm (مزرعة الفلاح), who are preparing to develop joint projects during the coming period, such as a seed nursery, fertilizer production, marketing, and others.<br>
+      The event included a visit to two seed nurseries, the first belonging to the Thababah Cooperative Society (جمعية ذبابة التعاونية) and the second to the Al-Khraishi nursery (مشتل الخريشي), both of which are located in the Thababa suburb of Tulkarem. The visit concluded with a group meeting on the land of the Roots of the Sun Cooperative (تعاونية جذور الشمس) in Shweika.<br>
+      The event is part of the Bayader project (مشروع البيادر), which is a joint effort between the Popular Art Centre, the Asala Association (جمعية أصالة), and the Social and Economic Policies Monitor (مرصد السياسات الاجتماعية والاقتصادية), in partnership with IM, the Swedish development partner.`,
+    images: [
+      "https://i.postimg.cc/rwYcC19p/315421971-5653663441383152-8769893408688520706-n.jpg",
+      "https://i.postimg.cc/xTfSwxxC/315473917-5653663731383123-2347368492706766900-n.jpg",
+      "https://i.postimg.cc/TPz6BTFM/315528849-5653663448049818-9094478906304944285-n.jpg",
+      "https://i.postimg.cc/B6200df8/315607079-5653663444716485-3288149734864749068-n.jpg",
+      "https://i.postimg.cc/N09tNKNk/315621601-5653663451383151-5307176349527077850-n.jpg",
+      "https://i.postimg.cc/nrZtc0n3/315713715-5653663674716462-7689150131186473277-n.jpg",
+      "https://i.postimg.cc/6q0x7n3t/315879027-5653663728049790-5523007974778590363-n.jpg",
+      "https://i.postimg.cc/HW4gPDtR/315921765-5653663701383126-8469656210106093318-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid0enuVciYCZvw53aZG2GUyiFMXU3bMeWYtZux174nndJoN4RSMTDwsEnRW4ib7o31Dl",
+    date: "15-11-2022",
+  },
+  {
+    place: "",
+    location: "An-Najah University",
+    caption:
+      `The Youth Partnership Forum, under the context of publishing and disseminating youth cooperative experiences,
+      held a meeting about the concept of cooperatives as an alternative economic model with the
+      participation of 40 students from Palestine Technical University Khadoory (امعة فلسطين التقنية خضوري) and the
+      College of Agriculture at An-Najah University (كلية الزراعه في جامعه النجاح).<br>
+      The concept of cooperatives, their patterns and their importance in the
+      Palestinian liberation context were presented, and the experiences of Ard AlYa'as (أرض اليأس)
+      and the Roots of the Sun (جذور الشمس) youth cooperatives were reviewed and a dialogue was opened with the students.<br>
+      Another cooperatives from Beit Furik town was unable to participate due to the
+      blockade imposed on Nablus Governorate.`,
+    images: [
+      "https://i.postimg.cc/0jjt9wLz/312403262-1704591636592768-4727818632370426369-n.jpg",
+      "https://i.postimg.cc/ydvQqPrq/312668284-1704591749926090-2777572058486005695-n.jpg",
+      "https://i.postimg.cc/fLw2gFCj/312744078-1704591959926069-6906305931559977564-n.jpg",
+      "https://i.postimg.cc/1XdvXzQJ/312806549-1704592246592707-4887283017372004130-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid02vSSXFfVBtSEj6Ms6GMSKEeFFqKP73z1ZcBwipiZj2sbWyuinJE3bV2ofpn5tCMm1l",
+    date: "23-10-2022",
+  },
+  {
+    place: "",
+    location: "Asira al-Qibliya",
+    caption:
+      `✌️🇵🇸باقون ما بقي الزعتر والزيتون✌️🇵🇸<br>
+      ✌️🇵🇸We're staying as long as thyme and olives remain✌️🇵🇸<br>
+      The Youth Partnership Forum and the Enlightenment Forum launched the 13th annual campaign to help farmers harvest olives, titled "We're staying as long as thyme and olives remain" in the town of Asira al-Qibliya (عصيرة القبلية), south of Nablus.<br>
+      The campaign will target 13 sites in 8 governorates throughout the country, and these sites are among the areas that are surrounded by settlements and are constantly exposed to attacks by the occupation and its settlers.
+      The start was from the village of Asira al-Qibliyya.`,
+    images: [
+      "https://i.postimg.cc/QMdpT3d7/311142077-1694510997600832-1806253148471732713-n.jpg",
+      "https://i.postimg.cc/YqQfcRPv/311294085-1694511547600777-1500821920556140009-n.jpg",
+      "https://i.postimg.cc/K8NPjzxF/311297687-1694511177600814-2006654610677671786-n.jpg",
+      "https://i.postimg.cc/DwFQ7sVB/311588138-1694510924267506-7190610834928937130-n.jpg",
+      "https://i.postimg.cc/66kL1gMs/312606606-1704733319911933-4978282477413670757-n.jpg",
+      "https://i.postimg.cc/Xv19Kzrz/312617221-1704733383245260-4821377763533177831-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid0h2KWEsu8gbUtaWznt2sszsLu4vUJGAu8BQe3QjB5TtdRhv46pKQh5rKuKL6cQSApl",
+    date: "10-10-2022",
+  },
+  {
+    place: "",
     location: "Ramallah",
     caption:
       `The Partnership Youth Forum organized the "Cooperative Work" camp (مخيم العمل التعاوني), with the participation
