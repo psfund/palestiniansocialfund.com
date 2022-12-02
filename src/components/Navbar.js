@@ -71,10 +71,10 @@ export default function Navbar() {
                     Track fund
                   </a>
                   <a
-                    href="https://docs.google.com/spreadsheets/d/1ge-Yg_FrUOwh38ftHkuJEowjZepxKJFO1XpF7bF5x1c/edit?usp=sharing"
+                    href="/milestones"
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    Resources & Milestones
+                    Milestones
                   </a>
                   <a
                     href="mailto:psfund@pm.me"
