@@ -1,24 +1,10 @@
 import { MainLayout } from "src/layouts"
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/line-clamp'),
-    ],
-  }
-  ```
-*/
 const milestones = [
   {
     id: 12,
     date: 'Nov 28, 2022',
-    description: 'Sent our first big sum of $6000 USD thanks to all the supporters in order to help cooperatives purchase seeds, greenhouses, irrigation networks, organic fertilizers, and tools.',
+    description: 'Sent our first big sum of $6000 USD, thanks to all the supporters, in order to help cooperatives purchase seeds, greenhouses, irrigation networks, organic fertilizers, and tools.',
     url: ''
   },
   {
@@ -94,52 +80,41 @@ const milestones = [
     id: 1,
     date: 'Jan 27, 2021',
     description: 'Launched the website',
-    url: 'https://palestiniansocialfund.com'
+    url: ''
   },
 ]
   
 export default function Milestones() {
   return (
     <MainLayout>
-      <ul role="list" className="divide-y divide-gray-200">
-        {milestones.map((message) => (
-          <li
-            key={message.id}
-            className="bg-white py-5 px-4 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 hover:bg-gray-50"
-          >
-            <div className="flex justify-between space-x-3">
-              <div className="min-w-0 flex-1">
-                {
-                  Array.isArray(message.url) &&
-                    <div className="block focus:outline-none">
-                      <p className="truncate text-sm font-medium text-gray-900">{message.description}</p>
-                    </div>
-                }
-                {
-                  !Array.isArray(message.url) &&
-                    <a href={message.url} target="_blank" className="block focus:outline-none">
-                      <p className="truncate text-sm font-medium text-gray-900">{message.description}</p>
-                    </a>
-                }
-              </div>
-              <time className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">
-                {message.date}
-              </time>
-            </div>
-            {Array.isArray(message.url) &&
-              <div className="mt-1">
-                {
-                  message.url.map((u) =>
-                    <a href={u} target="_blank" className="mt-1 text-sm text-blue-600 cursor-pointer line-clamp-2">
+      <div className="flex flex-col">
+        {milestones.map((m) =>
+          <div className="p-4 rounded-md hover:bg-gray-50">
+            <p className="mb-2 text-gray-500 border-l-2 border-l-gray-300 ps-3">
+              {m.date}
+            </p>
+            <p className="text-base font-medium">
+              {m.description}
+            </p>
+            <div className="flex flex-col">
+              {
+                !Array.isArray(m.url) &&
+                  <a href={m.url} target="_blank" className="text-blue-500 hover:text-blue-700">
+                    {m.url}
+                  </a>
+              }
+              {
+                Array.isArray(m.url) &&
+                  m.url.map((u) =>
+                    <a href={u} target="_blank" className="text-blue-500 hover:text-blue-700">
                       {u}
                     </a>
                   )
-                }
-              </div>
-            }
-          </li>
-        ))}
-      </ul>
+              }
+            </div>
+          </div>
+        )}
+      </div>
     </MainLayout>
   )
 }
