@@ -26,7 +26,7 @@ async function handler(req, res) {
         supporters: subscriptions.data.length,
         balance: `${
           (balance.available[1].amount + balance.pending[1].amount) / 100
-        } ${balance.available[0].currency.toUpperCase()}`,
+        } ${balance.available[1].currency.toUpperCase()}`,
       });
     } catch (error) {
       console.log(error);
