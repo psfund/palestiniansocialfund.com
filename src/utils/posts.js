@@ -1,5 +1,29 @@
 const posts = [
   {
+    place: "Ard Al Ya's",
+    location: "Saffa",
+    caption:
+      `Thanks to the relentless solidarity by the supporters of the PSF, we've been able
+      to help Ard Al Ya's (أرض اليأس) cooperative purchase a 1/2 dunum greenhouse to increase their harvest.
+      The cooperative is made up of 9 members and has 3 other greenhouses. Read what Samer, a member of the cooperative,
+      has to say about their journey in the images below.
+      <br />
+      <br />
+      This is the power we have when we come together, and we aim to continue replicating this support for other
+      cooperatives to break the dependency on the occupation. To liberation and beyond!`,
+    images: [
+      "https://i.postimg.cc/j51nLnKM/Frame-41.png",
+      "https://i.postimg.cc/R0MH8zXL/Frame-42.png",
+      "https://i.postimg.cc/d04ycSfP/Frame-43.png",
+      "https://i.postimg.cc/RFhnSLr3/Frame-44.png",
+      "https://i.postimg.cc/XY6Ff55h/Frame-46.png",
+      "https://i.postimg.cc/nhKm0LYL/Frame-57.png",
+      "https://i.postimg.cc/Bb1LDZn4/Frame-59.png",
+    ],
+    url: "",
+    date: "10-01-2023",
+  },
+  {
     place: "",
     location: "Thababa",
     caption:
