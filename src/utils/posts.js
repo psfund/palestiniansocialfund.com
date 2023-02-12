@@ -3,14 +3,26 @@ const posts = [
     place: "Ard Al Ya's",
     location: "Saffa",
     caption:
-      `Thanks to the relentless solidarity by the supporters of the PSF, we've been able
-      to help Ard Al Ya's (أرض اليأس) cooperative purchase a 1/2 dunum greenhouse to increase their harvest.
-      The cooperative is made up of 9 members and has 3 other greenhouses. Read what Samer, a member of the cooperative,
-      has to say about their journey in the images below.
+      `2022 Update 🇵🇸
       <br />
       <br />
-      This is the power we have when we come together, and we aim to continue replicating this support for other
-      cooperatives to break the dependency on the occupation. To liberation and beyond!`,
+      Nearing the close of 2022, the support poured in and we raised 6000 USD to support the cooperative farms in Palestine. A warm salute to all the supporters for their uncompromising solidarity ✊
+      <br />
+      <br />
+      Ard Al Ya’s أرض اليأس cooperative was looking to increase their harvest for the coming season and needed a greenhouse to do so. The PSF contributed the amount raised to them and they covered the rest to fulfill the purchase of 1/2 dunum greenhouse for 7000 USD. Learn more about their journey in the post. 
+      <br />
+      <br />
+      As you can see, things aren’t cheap and our support can propel the agricultural cooperative movement forward faster. Ard Al Ya’s is one coop—there are many others doing great work in their communities that we can support.
+      <br />
+      <br />
+      And we repeat: the quest for food sovereignty and return to land cultivation is inseparable from liberation. It is a direct refusal to work in settlements and an alternative to the occupation’s produce that floods our markets.
+      <br />
+      <br />
+      Our next campaign will be announced soon, stay tuned and spread the word.
+      <br />
+      <br />
+      To liberation and beyond ✌️
+      `,
     images: [
       "https://i.postimg.cc/15hHrB80/Frame-40.png",
       "https://i.postimg.cc/50X3nk5g/Frame-41.png",
