@@ -2,6 +2,18 @@ import { MainLayout } from "src/layouts"
 
 const milestones = [
   {
+    id: 14,
+    date: 'Mar 05, 2023',
+    description: 'The PSF was a part of a panel hosted by the DSA BDS & Palestine Solidarity group, where $700 USD were raised from attendees in solidarity.',
+    url: 'https://www.instagram.com/p/CpEN1Y2tCXu/'
+  },
+  {
+    id: 13,
+    date: 'Feb 12, 2023',
+    description: 'The $6000 raised in 2022 were used to purchase a 1/2 dunam greenhouse for Ard Al Ya\'s cooperative in Saffa to help increase their yield in the coming season.',
+    url: 'https://www.instagram.com/p/CokplCuJsFq/'
+  },
+  {
     id: 12,
     date: 'Nov 28, 2022',
     description: 'Sent our first big sum of $6000 USD, thanks to all the supporters, in order to help cooperatives purchase seeds, greenhouses, irrigation networks, organic fertilizers, and tools.',
