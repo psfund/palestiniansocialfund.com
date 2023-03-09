@@ -255,21 +255,24 @@ export default function Pamphlet() {
             </h1>
             <div className="text-lg">
               <p className="mb-3">
-                Palestinian Social Fund seeks to strengthen the farmers who feed
-                our communities and highlight the power they hold in overcoming
-                the occupation and creating a self-sufficient Palestinian
-                society. We work with local people who adapt agricultural
-                techniques to suit the local area and its specific social,
-                environmental, and economic conditions.
+                On a biweekly basis, you’ll find a farmer’s market set up on
+                tables laid out in front of the cultural center in Ramallah. A
+                number of agricultural cooperatives from the surrounding
+                municipalities come to sell their organic produce to passersby
+                and to regular customers that come out in their support. Most of
+                these cooperatives are youth-led farms inspired by a surge of
+                interest in new models of community-supported farming using
+                agroecological methods.
               </p>
               <p className="mb-3">
-                On a biweekly basis, you’ll find a farmer’s market set on tables
-                laid out in front of the cultural center in Ramallah. A number
-                of agricultural cooperatives from the surrounding municipalities
-                come to sell their organic produce to passersby and regular
-                customers who show their support. Most of these cooperatives are
-                youth-led farms inspired by a surge of interest in new models of
-                community-supported farming using agroecological methods.
+                This farmer’s market isn’t just a place to buy organic produce,
+                it’s a place to get a taste of what’s to come. The Palestinian
+                youth today are paving the way toward establishing food
+                sovereignty and reducing dependence on the products and
+                employment of the occupation. They uphold their values and
+                principles through a cooperative organizational model centered
+                on equity amongst farmers themselves, between farmers and their
+                community, and the environment.
               </p>
             </div>
 
@@ -278,15 +281,27 @@ export default function Pamphlet() {
             </h2>
             <div className="text-lg">
               <p className="mb-3">
-                This farmer’s market isn’t just a place to buy organic produce,
-                it’s a place to get a taste of what’s to come. The Palestinian
-                youth today are paving the way toward establishing food
-                sovereignty and reducing dependence on the products and
-                employment of the occupation. They uphold their values and
-                principles through a cooperative organizational model centered
-                on equity amongst farmers themselves, and between farmers and
-                their communities.
+                Agroecology is an agricultural method that mimics the natural
+                cycles of the environment, in order to reuse waste and avoid
+                external inputs.
               </p>
+              <p className="mb-3">
+                This method is a holistic approach to the problems that
+                Palestinian farmers face. Agroecology pushes farmers away from
+                using chemical fertilizers and pesticides that seep harmful
+                chemicals into the food and soil. It also breaks the dependency
+                on the occupation and outside corporations, who control these
+                products and limit farmers to using seeds genetically modified
+                to withstand the harsh chemicals.
+              </p>
+              <blockquote className="mt-10 text-xl text-center font-semibold leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9">
+                <i>
+                  “There can be no liberation if we don’t have sovereignty over
+                  our daily bread. Agroecology is a way towards food
+                  sovereignty, which can then enable us to consider questions of
+                  political liberation.”
+                </i>
+              </blockquote>
             </div>
 
             <h2 className="mt-8 mb-4 text-xl font-medium text-gray-500">
@@ -294,14 +309,23 @@ export default function Pamphlet() {
             </h2>
             <div className="text-lg">
               <p className="mb-3">
-                This farmer’s market isn’t just a place to buy organic produce,
-                it’s a place to get a taste of what’s to come. The Palestinian
-                youth today are paving the way toward establishing food
-                sovereignty and reducing dependence on the products and
-                employment of the occupation. They uphold their values and
-                principles through a cooperative organizational model centered
-                on equity amongst farmers themselves, and between farmers and
-                their communities.
+                Cooperativism is a way to organize production around strongly
+                rooted communal ideals of solidarity and reciprocity. It applies
+                a horizontal structure where all the workers and farmers have an
+                equal ownership in the production.
+              </p>
+              <p className="mb-3">
+                Al-Ouna (العونة) is the historical term used for cooperativism
+                in Palestine, it has always been a part of our Palestinian
+                character, especially in farming. Families would cooperate in
+                their olive harvests and sing folk songs sending gratitude and
+                good wishes to each other. They would do the same when roofing a
+                house, which till this day is a celebration and the house's
+                owner invites everyone to food after the roof is finished.
+              </p>
+              <p className="mb-3">
+                The return to and protection of the land, under a cooperative
+                framework means we’re returning to our roots.
               </p>
             </div>
           </div>
