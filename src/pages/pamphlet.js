@@ -19,19 +19,21 @@ export default function Pamphlet() {
   const coopFarmsRef = useRef();
 
   const handleScroll = () => {
-    const introTop = introRef.current.getBoundingClientRect().top;
-    const statsTop = statsRef.current.getBoundingClientRect().top;
-    const coopFarmsTop = coopFarmsRef.current.getBoundingClientRect().top;
+    if (introRef.current) {
+      const introTop = introRef.current.getBoundingClientRect().top;
+      const statsTop = statsRef.current.getBoundingClientRect().top;
+      const coopFarmsTop = coopFarmsRef.current.getBoundingClientRect().top;
 
-    if (introTop === 0 && currentTab !== "Introduction") {
-      setCurrentTab("Introduction");
-    } else if (statsTop === 0 && currentTab !== "Statistics") {
-      setCurrentTab("Statistics");
-    } else if (
-      (coopFarmsTop === 0 || statsTop < 0) &&
-      currentTab !== "Cooperative Farms"
-    ) {
-      setCurrentTab("Cooperative Farms");
+      if (introTop === 0 && currentTab !== "Introduction") {
+        setCurrentTab("Introduction");
+      } else if (statsTop === 0 && currentTab !== "Statistics") {
+        setCurrentTab("Statistics");
+      } else if (
+        (coopFarmsTop === 0 || statsTop < 0) &&
+        currentTab !== "Cooperative Farms"
+      ) {
+        setCurrentTab("Cooperative Farms");
+      }
     }
   };
 
