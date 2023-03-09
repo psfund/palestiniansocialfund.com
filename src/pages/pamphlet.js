@@ -43,7 +43,7 @@ export default function Pamphlet() {
   return (
     <MainLayout>
       <div className="grid grid-cols-12">
-        <div className="col-span-2">
+        <div className="hidden md:inline-block md:col-span-2">
           <nav
             className="sticky top-0 pt-3 pr-4 space-y-1"
             aria-label="Sidebar"
@@ -66,7 +66,7 @@ export default function Pamphlet() {
           </nav>
         </div>
 
-        <div className="col-span-8">
+        <div className="col-span-12 md:col-span-8">
           <div className="pb-8">
             <h1
               ref={introRef}
