@@ -136,7 +136,7 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="/pamphlet/introduction"
+                href="/pamphlet"
                 className={classNames(
                   currentTab === "pamphlet"
                     ? "bg-gray-50 border-gray-500 text-gray-700"
