@@ -1,9 +1,72 @@
 const posts = [
   {
+    place: "",
+    location: "West Bank",
+    caption: `Over 100 food baskets have been donated to families during the holy month of Ramadan.
+      <br />
+      <br />
+      The campaign collected products from youth and women's farming and food cooperatives to distribute to families.
+      The cooperatives are playing an important role in society's social welfare and they will become more integral in the years to come.
+      <br />
+      <br />
+      All thanks to those who donated and contributed to doing good and strengthening the state of solidarity and interdependence among our Palestinian people.
+      `,
+    images: [
+      "https://i.postimg.cc/FzGqSQFj/341204948-911847906747390-2287516499861352854-n.jpg",
+      "https://i.postimg.cc/Kjmw4YbG/341533613-256387903496058-1923777376259111899-n.jpg",
+    ],
+    url: "https://www.facebook.com/groups/1180687165773771/permalink/1600058043836679/?sfnsn=mo&ref=share&mibextid=KtfwRi",
+    date: "14-04-2023",
+  },
+  {
+    place: "Retaj Women's Cooperative",
+    location: "Asira Al Qibliya",
+    caption: `On the occasion of the eternal Land Day, our message to our Palestinian youth:
+      <br />
+      <br />
+      Cultivating the land with your hands and with your cooperation is the actual way to protect the land from occupation and build a productive economy that secures real sovereignty and provides us with a decent life.
+      <br />
+      <br />
+      Onwards to a collective return to the land through agricultural youth cooperatives!
+      `,
+    images: [
+      "https://i.postimg.cc/nzZY8RB5/337548590-1242180059759835-6039420714311928427-n.jpg",
+      "https://i.postimg.cc/pLhBKnP0/337126384-1729700420779940-4326568287402437387-n.jpg",
+      "https://i.postimg.cc/VLHRSFPr/337507382-1011734876897620-1341749597518018311-n.jpg",
+      "https://i.postimg.cc/XYRkL7Jn/337515284-551781313724203-5281792923180009861-n.jpg",
+      "https://i.postimg.cc/25nFKRbh/337664775-1215618702678266-6883951771566231755-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid02Cf384d5dHGGqby5jWeF66D3jy51NjKE2xyHcwKjCLTJCtiHYUwDUEVJSpwhXaQNkl",
+    date: "30-03-2023",
+  },
+  {
+    place: "Al Ardu Lana",
+    location: "Jenin",
+    caption: `The Land is Ours (الأرض لنا) cooperative continues its agricultural activity!
+      <br />
+      <br />
+      The Land Is Ours youth cooperative planted a greenhouse with green beans and local lettuce, this comes as a continuation of the cooperative's efforts to dive into action and work.
+      <br />
+      <br />
+      As one of the outcomes of its strategic vision in the social economy is ensuring the creation of job opportunities for young people
+      and presenting it as an alternative path that plays a social, nationalistic and ethical role towards the local community and its institutions.
+      `,
+    images: [
+      "https://i.postimg.cc/dVMCPZjT/331883853-1125198214842190-6053743128261305440-n.jpg",
+      "https://i.postimg.cc/tgknxSQh/330768000-1197056797582365-445585179124298915-n.jpg",
+      "https://i.postimg.cc/KjwMY1Xw/330628465-1870701789937891-4945374121144320232-n.jpg",
+      "https://i.postimg.cc/mZ5Mj5cj/331936889-1572474853164865-2011584121344347627-n.jpg",
+      "https://i.postimg.cc/3J0GcFmT/331948159-1439202860182146-3743218517779758694-n.jpg",
+      "https://i.postimg.cc/CxjqFMcr/331948751-590273746288588-4715904514363724542-n.jpg",
+      "https://i.postimg.cc/wBgs3KPq/332136010-5842228132560580-175759277331599400-n.jpg",
+    ],
+    url: "https://www.facebook.com/FADOC1726/posts/pfbid021tuFLNmdeRWG6XcqnQH4YkKYsBow8EmZCDGLB2YNwEQd9675SxGq9EiyAdtzP6CKl",
+    date: "18-02-2023",
+  },
+  {
     place: "Ard Al Ya's",
     location: "Saffa",
-    caption:
-      `2022 Update 🇵🇸
+    caption: `2022 Update 🇵🇸
       <br />
       <br />
       Nearing the close of 2022, the support poured in and we raised 6000 USD to support the cooperative farms in Palestine. A warm salute to all the supporters for their uncompromising solidarity ✊
@@ -39,8 +102,7 @@ const posts = [
   {
     place: "",
     location: "Thababa",
-    caption:
-      `The Popular Art Centre (مركز الفن الشعبي) organized an educational visit to the cooperatives working in a seed nusery, with the participation of the Rummana cooperative (تعونية رمانة) from Saffa village (قرية صفا), the Land and Plants cooperative - Roots nursery (تعاونية أرض وزرع - مشتل جذور) from Beit Furik (بيت فوريك), the Retaj Women's Cooperative (تعاونية رتاج النسوية) and the cooperatives in Western Ramallah, the Land of Despair (أرض اليأس) and the Land of the Fallaheen (أرض الفلاحين) and the Fallah's farm (مزرعة الفلاح), who are preparing to develop joint projects during the coming period, such as a seed nursery, fertilizer production, marketing, and others.<br>
+    caption: `The Popular Art Centre (مركز الفن الشعبي) organized an educational visit to the cooperatives working in a seed nusery, with the participation of the Rummana cooperative (تعونية رمانة) from Saffa village (قرية صفا), the Land and Plants cooperative - Roots nursery (تعاونية أرض وزرع - مشتل جذور) from Beit Furik (بيت فوريك), the Retaj Women's Cooperative (تعاونية رتاج النسوية) and the cooperatives in Western Ramallah, the Land of Despair (أرض اليأس) and the Land of the Fallaheen (أرض الفلاحين) and the Fallah's farm (مزرعة الفلاح), who are preparing to develop joint projects during the coming period, such as a seed nursery, fertilizer production, marketing, and others.<br>
       The event included a visit to two seed nurseries, the first belonging to the Thababah Cooperative Society (جمعية ذبابة التعاونية) and the second to the Al-Khraishi nursery (مشتل الخريشي), both of which are located in the Thababa suburb of Tulkarem. The visit concluded with a group meeting on the land of the Roots of the Sun Cooperative (تعاونية جذور الشمس) in Shweika.<br>
       The event is part of the Bayader project (مشروع البيادر), which is a joint effort between the Popular Art Centre, the Asala Association (جمعية أصالة), and the Social and Economic Policies Monitor (مرصد السياسات الاجتماعية والاقتصادية), in partnership with IM, the Swedish development partner.`,
     images: [
@@ -59,8 +121,7 @@ const posts = [
   {
     place: "",
     location: "An-Najah University",
-    caption:
-      `The Youth Partnership Forum, under the context of publishing and disseminating youth cooperative experiences,
+    caption: `The Youth Partnership Forum, under the context of publishing and disseminating youth cooperative experiences,
       held a meeting about the concept of cooperatives as an alternative economic model with the
       participation of 40 students from Palestine Technical University Khadoory (امعة فلسطين التقنية خضوري) and the
       College of Agriculture at An-Najah University (كلية الزراعه في جامعه النجاح).<br>
@@ -81,8 +142,7 @@ const posts = [
   {
     place: "",
     location: "Asira al-Qibliya",
-    caption:
-      `✌️🇵🇸باقون ما بقي الزعتر والزيتون✌️🇵🇸<br>
+    caption: `✌️🇵🇸باقون ما بقي الزعتر والزيتون✌️🇵🇸<br>
       ✌️🇵🇸We're staying as long as thyme and olives remain✌️🇵🇸<br>
       The Youth Partnership Forum and the Enlightenment Forum launched the 13th annual campaign to help farmers harvest olives, titled "We're staying as long as thyme and olives remain" in the town of Asira al-Qibliya (عصيرة القبلية), south of Nablus.<br>
       The campaign will target 13 sites in 8 governorates throughout the country, and these sites are among the areas that are surrounded by settlements and are constantly exposed to attacks by the occupation and its settlers.
@@ -101,8 +161,7 @@ const posts = [
   {
     place: "",
     location: "Ramallah",
-    caption:
-      `The Partnership Youth Forum organized the "Cooperative Work" camp (مخيم العمل التعاوني), with the participation
+    caption: `The Partnership Youth Forum organized the "Cooperative Work" camp (مخيم العمل التعاوني), with the participation
       of more than 50 participants representing 17 youth and women's cooperative groups and associations
       from different municipalities of the country. The goal of the camp is to provide a space for dialogue,
       mutual learning and teamwork between the participating cooperatives upon 4 main axes: identity and
@@ -127,8 +186,7 @@ const posts = [
   {
     place: "",
     location: "Beit Duqqu",
-    caption:
-      `Solidarity campaign for Beit Duqqu grape farmers—on its third day, 70 cartons of grapes were purchased, to bring
+    caption: `Solidarity campaign for Beit Duqqu grape farmers—on its third day, 70 cartons of grapes were purchased, to bring
       the total to 200 cartons (1000 kg of grapes) that were distributed across 60 families in need and a group of women
       who make food products (malban and molasses - ملبن و دبس).
       Thank you to the everyone's support in raising our community and protecting it,
@@ -143,8 +201,7 @@ const posts = [
   {
     place: "Om Sleiman",
     location: "Bil'in",
-    caption:
-      `The Partnership Youth Forum organized a field visit to Om Sleiman Farm in Bil’in village as a distinguished agricultural model specialized in ecological and community-supported agriculture within the “Falahoun Mutajawilun” (Roaming Farmers) initiative.
+    caption: `The Partnership Youth Forum organized a field visit to Om Sleiman Farm in Bil’in village as a distinguished agricultural model specialized in ecological and community-supported agriculture within the “Falahoun Mutajawilun” (Roaming Farmers) initiative.
       35 people representing 11 agricultural cooperatives and associations from Tulkarm, Jenin, Nablus and Ramallah participated in the visit, as part of the forum's aims to promote mutual learning through scientific practices on the ground.
       The visit included getting acquainted with the farm and its establishment, and then a field tour to identify the sections of the farm, such as the cultivated land and diversity of products, seedling incubator, and compost workshop, followed by a dialogue between the group on several issues: ecological agriculture, planning harvests, marketing etc.
       The cooperative groups and the participating farms are: Roots of the Sun (جذور الشمس) from Tulkarm, the Land & Cultivation (أرض وزرع) cooperative in the villages of Burin and Beit Furik, Lovers of the Land (عشاق الأرض), Surra (صرة) cooperative, Hope (الأمل) cooperative, and Bayta (بيتا) cooperative from Nablus governorate.
