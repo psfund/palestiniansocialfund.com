@@ -51,11 +51,8 @@ const Home = () => {
             <div className="bg-white sm:w-full sm:mx-auto sm:rounded-md sm:overflow-hidden">
               <div className="flex-1 p-4 border rounded-md border-gray-300">
                 <p className="text-2xl tracking-tight font-medium border-r-2 border-gray-50 mb-3">
-                  The Palestinian Social Fund aims to financially support Palestinian cooperative farms.
-                </p>
-                <p className="mt-3 text-base">
-                  The PSF is way for us to raise money for farming cooperatives
-                  as <em>"there can be no liberation without sovereignty over our daily bread."</em>
+                  The Palestinian Social Fund raises unconditional funding for
+                  cooperative farms in Palestine through grassroots efforts.
                 </p>
                 <p className="mt-3 text-base">
                   We're a volunteer-run non-profit with clear values:
@@ -71,11 +68,8 @@ const Home = () => {
                     We don’t make conditions.{" "}
                   </li>
                   <li className="text-base mb-2 tracking-tight">
-                    We don’t take money from organizations or big donors.{" "}
-                  </li>
-                  <li className="text-base mb-2 tracking-tight">
-                    We believe the fund’s success will be determined by the people’s
-                    solidarity.
+                    We believe the fund’s success will be determined by the
+                    people’s solidarity.
                   </li>
                 </ul>
               </div>
@@ -96,8 +90,14 @@ const Home = () => {
               <li key={postIdx} className="px-4 py-10 sm:px-0">
                 <div>
                   <div className="mb-2 text-lg text-gray-900">
-                    <div dangerouslySetInnerHTML={{ __html: trimText(post.caption, readMore[postIdx] ? 1000 : 50) }} />
-                    {" "}
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: trimText(
+                          post.caption,
+                          readMore[postIdx] ? 1000 : 50
+                        ),
+                      }}
+                    />{" "}
                     {post.caption.split(" ").length > 50 &&
                     !readMore[postIdx] ? (
                       <button
