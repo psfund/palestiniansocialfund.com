@@ -18,6 +18,8 @@ export default function Navbar() {
       setCurrentTab("fund");
     } else if (pathname.includes("support")) {
       setCurrentTab("support");
+    } else if (pathname.includes("pamphlet")) {
+      setCurrentTab("pamphlet");
     } else {
       setCurrentTab("home");
     }
@@ -71,6 +73,12 @@ export default function Navbar() {
                     Track fund
                   </a>
                   <a
+                    href="/pamphlet"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    Pamphlet
+                  </a>
+                  <a
                     href="/milestones"
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
@@ -88,7 +96,10 @@ export default function Navbar() {
                 {/* <div>
                   <LocaleSwitch />
                 </div> */}
-                <Link className="flex items-center bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75" href="/support">
+                <Link
+                  className="flex items-center bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
+                  href="/support"
+                >
                   Support
                   <ArrowRightIcon className="ms-2 h-4 w-4" />
                 </Link>
@@ -125,10 +136,22 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
+                href="/pamphlet"
+                className={classNames(
+                  currentTab === "pamphlet"
+                    ? "bg-gray-50 border-gray-500 text-gray-700"
+                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700",
+                  "block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                )}
+              >
+                Pamphlet
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
                 href="https://psfund.notion.site/35b1c59f568c4e68bb64fe38d0508c01?v=1d71309e31a64436901f756750e082bf"
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               >
-                Resources & Milestones
+                Milestones
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
@@ -154,49 +177,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  );
-  return (
-    <header>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="w-full py-6 flex items-center justify-between border-b lg:border-none">
-          <div className="flex items-center">
-            <div>
-              <span className="sr-only">Palestinian Social Fund</span>
-              <div className="flex-shrink-0 pe-3 flex items-center">
-                <Link href="/">
-                  <img
-                    className="h-10 w-auto"
-                    src="/logo.svg"
-                    alt="Palestinian Social Fund"
-                  />
-                </Link>
-              </div>
-            </div>
-            <div className="hidden ms-10 space-x-8 lg:block">
-              {navigation.map((link) => (
-                <Link className="text-base underline font-medium hover:opacity-75 md:me-2" key={link.name} href={link.href}>
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="ms-10 flex items-center space-s-4">
-            {/* <div>
-              <LocaleSwitch />
-            </div> */}
-            <Link className="inline-block bg-black py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75" href="/support">
-              Support Fund
-            </Link>
-          </div>
-        </div>
-        <div className="py-4 flex flex-wrap justify-center space-x-6 border-b lg:hidden">
-          {navigation.map((link) => (
-            <Link className="text-base underline font-medium hover:opacity-75" key={link.name} href={link.href}>
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      </nav>
-    </header>
   );
 }
