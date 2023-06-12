@@ -211,7 +211,7 @@ export default function Pamphlet() {
             <div className="text-lg my-3">
               <p className="mb-3">
                 The Palestinian Social Fund aims to involve Palestinians abroad
-                in raising unconditional fundinf for cooperative farms for 3
+                in raising unconditional funding for cooperative farms for 3
                 main reasons:
               </p>
               <ol className="list-decimal mb-3 pl-10">
