@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { MainLayout } from "src/layouts";
+import Plans from "src/components/Plans";
 
 const navigation = [
   { name: "Introduction", href: "#introduction" },
@@ -9,6 +10,7 @@ const navigation = [
   { name: "Cooperative Farms", href: "#cooperative-farms" },
   { name: "Cooperativism", href: "#cooperativism" },
   { name: "Agroecology", href: "#agroecology" },
+  { name: "Support", href: "#support" },
 ];
 
 function classNames(...classes) {
@@ -25,6 +27,7 @@ export default function Pamphlet() {
   const sectionFiveRef = useRef();
   const sectionSixRef = useRef();
   const sectionSevenRef = useRef();
+  const sectionEightRef = useRef();
 
   const handleScroll = () => {
     if (sectionOneRef.current) {
@@ -37,6 +40,8 @@ export default function Pamphlet() {
       const sectionSixTop = sectionSixRef.current.getBoundingClientRect().top;
       const sectionSevenTop =
         sectionSevenRef.current.getBoundingClientRect().top;
+      const sectionEightTop =
+        sectionEightRef.current.getBoundingClientRect().top;
       const scrollY = window.scrollY;
       const pageHeight =
         window.document.body.scrollHeight - window.document.body.offsetHeight;
@@ -59,11 +64,14 @@ export default function Pamphlet() {
         setCurrentTab("Cooperative Farms");
       } else if (sectionSixTop === 0 && currentTab !== "Cooperativism") {
         setCurrentTab("Cooperativism");
+      } else if (sectionSevenTop === 0 && currentTab !== "Agroecology") {
+        setCurrentTab("Agroecology");
       } else if (
-        (sectionSevenTop === 0 && currentTab !== "Agroecology") ||
+        (sectionEightTop === 0 && currentTab !== "Support") ||
         scrollY >= pageHeight
       ) {
-        setCurrentTab("Agroecology");
+        console.log(sectionEightTop, scrollY >= pageHeight);
+        setCurrentTab("Support");
       }
     }
   };
@@ -337,6 +345,15 @@ export default function Pamphlet() {
                 </i>
               </blockquote>
             </div>
+          </div>
+
+          <div className="pb-8">
+            <h1
+              ref={sectionEightRef}
+              id="support"
+              className="sticky top-0 bg-white py-3 mb-6 font-bold text-3xl"
+            ></h1>
+            <Plans />
           </div>
         </div>
       </div>
