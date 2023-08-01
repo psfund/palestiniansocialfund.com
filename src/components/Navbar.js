@@ -161,7 +161,7 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="https://psfund.notion.site/35b1c59f568c4e68bb64fe38d0508c01?v=1d71309e31a64436901f756750e082bf"
+                href="/milestones"
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               >
                 Milestones
