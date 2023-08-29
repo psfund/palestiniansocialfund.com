@@ -21,12 +21,15 @@ async function handler(req, res) {
         limit: 100,
       });
 
+      const usdAvailable = balance.available.find((b) => b.currency === "usd");
+      const usdPending = balance.pending.find((p) => p.currency === "usd");
+
       res.status(200).json({
         payments: cleanCharges,
         supporters: subscriptions.data.length,
         balance: `${
-          (balance.available[0].amount + balance.pending[0].amount) / 100
-        } ${balance.available[0].currency.toUpperCase()}`,
+          (usdAvailable.amount + usdPending.amount) / 100
+        } ${usdAvailable.currency.toUpperCase()}`,
       });
     } catch (error) {
       console.log(error);
