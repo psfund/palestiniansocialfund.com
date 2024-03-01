@@ -18,8 +18,24 @@ async function handler(req, res) {
 
       const subscriptions = await stripe.subscriptions.search({
         query: "status:'active'",
-        limit: 200,
+        limit: 100,
       });
+
+      while (subscriptions.has_more) {
+        const nextPgSubscriptions = await stripe.subscriptions.search({
+          query: "status:'active'",
+          limit: 100,
+          page: subscriptions.next_page,
+        });
+
+        subscriptions.data = [
+          ...subscriptions.data,
+          ...nextPgSubscriptions.data,
+        ];
+
+        subscriptions.next_page = nextPgSubscriptions.next_page;
+        subscriptions.has_more = nextPgSubscriptions.has_more;
+      }
 
       const usdAvailable = balance.available.find((b) => b.currency === "usd");
       const usdPending = balance.pending.find((p) => p.currency === "usd");
