@@ -18,7 +18,7 @@ async function handler(req, res) {
 
       const subscriptions = await stripe.subscriptions.search({
         query: "status:'active'",
-        limit: 100,
+        limit: 200,
       });
 
       const usdAvailable = balance.available.find((b) => b.currency === "usd");
