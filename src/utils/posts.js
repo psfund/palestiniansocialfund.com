@@ -1,6 +1,151 @@
 const posts = [
   {
     place: "",
+    location: "Montreal",
+    caption: `After 146 days of genocide committed on Gaza, the occupation has also increased aggression on the West Bank.
+    <br />
+    <br />
+    Over 200 thousand have been out of work for the last 4 months after being banned from working in the ‘48 territories and the settlements. This has caused a ripple effect of instability in West Bank’s economy.
+    <br />
+    <br />
+    Over 2000 Gazan workers have been thrown into the West Bank with no money and nowhere to stay. Many have set up mattresses in the outdoors.
+    <br />
+    <br />
+    In an effort to ensure the livelihood and dignity of the workers, the farming cooperatives want to provide work to unemployed Gazans and the PSF is raising funds to subsidize their income.
+    <br />
+    <br />
+    We will be able to support 10 workers for 5 months if we reach our 20k goal. Any surplus will support more workers.
+    <br />
+    <br />
+    Your support will help the efforts to provide social security to the workers.
+    <br />
+    <br />
+    Long live Gaza!
+    Long live Palestine!
+    To liberation and beyond! 🇵🇸`,
+    images: [
+      "https://i.postimg.cc/MHDJMfP7/Instagram-post-241.png",
+      "https://i.postimg.cc/Qtc3Dycn/Instagram-post-242.png",
+      "https://i.postimg.cc/kG9dgvcM/Instagram-post-243.png",
+      "https://i.postimg.cc/CK3gWgnq/Instagram-post-244.png",
+    ],
+    url: "https://www.instagram.com/p/C3-kRl-L-ng",
+    date: "01-03-2024",
+  },
+  {
+    place: "",
+    location: "Montreal",
+    caption: `Yesterday, community members and youth joined us for a film screening and discussion on the significance of cooperative farming in the occupied West Bank. Cohosted by the Palestinian Social Fund, the Popular Art Center, and the Palestinian Youth Movement, we discussed the nature of agriculture and ecological practices as a form of popular resistance and steadfastness against the exploitation, liberalization and destruction of our natural resources and economy at the hands of the Zionist regime.
+      <br />
+      <br />
+      The path to liberation is through our people’s struggle to remain steadfast on their land. Our deep-rooted connection to our land enables us to fight for full liberation and return! ✊🇵🇸`,
+    images: [
+      "https://i.postimg.cc/7ZHjcLBc/Screenshot-2024-03-15-at-1-40-35-PM.png",
+    ],
+    url: "https://www.instagram.com/p/C27whynonIX",
+    date: "04-02-2024",
+  },
+  {
+    place: "Al Ardu Lana",
+    location: "Arraba",
+    caption: `We're rooted in the land, we cultivate it and water it with the sweat of our foreheads.
+      <br />
+      <br />
+      Arraba-Jenin: The Al Ardu Lana cooperative in the town of Arraba, southwest of Jenin, planted its greenhouse with lettuce and herb seedlings after preparing the soil, rehabilitating it, and preparing it for cultivation.
+      On the other hand, the cooperative received its new greenhouse with the agricultural needs of water tanks and irrigation networks, provided by the Partnership Youth Forum in Palestine, as part of the forum’s plan for the year 2023 to build youth cooperatives, support them, provide their needs, and empower them with the appropriate tools and knowledge for their success and continuity, believing in the ability of youth to create change and building a resilient social and local economy, and to root in and return to the land.`,
+    images: [
+      "https://i.postimg.cc/Yqk6fL95/Screenshot-2024-03-15-at-1-34-39-PM.png",
+      "https://i.postimg.cc/WzmMcT9Y/Screenshot-2024-03-15-at-1-34-48-PM.png",
+    ],
+    url: "https://www.instagram.com/p/C1ZVnZ3NHXx",
+    date: "28-12-2023",
+  },
+  {
+    place: "",
+    location: "West Bank",
+    caption: `Under the slogan: “Home gardens are a step on the path to social solidarity,” the Palestinian Cultural Tanwiri Forum and the Center for Legal and Psychological Support and Guidance for Women are organizing (the Home Gardens Campaign) within the work program of the Partnership Youth Forum, which includes distributing seedlings and seeds to women who own agricultural spaces in front of their homes, and the campaign coordinator A. Wael Al-Faqih said that the idea was inspired by the First Intifada in 1987, when the culture of return to the land and social solidarity was strengthened, and it was a pioneering experience that formed a model in the concepts of steadfastness. Al-Faqih added that in light of the deteriorating economic conditions we are living in today and the developments taking place on the ground, this project was developed so that ten rural sites are targeted and seedlings and seeds are distributed to women who own agricultural space.`,
+    images: [
+      "https://i.postimg.cc/D0QzwZ3s/Screenshot-2024-03-15-at-1-27-31-PM.png",
+      "https://i.postimg.cc/tRFJ5rnT/Screenshot-2024-03-15-at-1-27-39-PM.png",
+      "https://i.postimg.cc/qM0RZ82G/Screenshot-2024-03-15-at-1-27-49-PM.png",
+      "https://i.postimg.cc/prMTvj4R/Screenshot-2024-03-15-at-1-27-59-PM.png",
+    ],
+    url: "https://www.instagram.com/p/C0cHGqGtfnC",
+    date: "04-12-2023",
+  },
+  {
+    place: "",
+    location: "West Bank",
+    caption: `A collective statement issued by 32 Palestinian community organizations in response to the threats from European and other foreign funders in halting foreign aid.
+      <br />
+      <br />
+      This is a call onto the diaspora to join the collective effort in disengaging from dependence on foreign aid and in building a path towards self sufficiency.`,
+    images: [
+      "https://i.postimg.cc/QtX13RTf/Screenshot-2024-03-15-at-1-20-01-PM.png",
+      "https://i.postimg.cc/rmQWFQGM/Screenshot-2024-03-15-at-1-20-10-PM.png",
+      "https://i.postimg.cc/HL0XFpVJ/Screenshot-2024-03-15-at-1-20-20-PM.png",
+      "https://i.postimg.cc/d3fyG3Sf/Screenshot-2024-03-15-at-1-20-31-PM.png",
+      "https://i.postimg.cc/Rhht3KGf/Screenshot-2024-03-15-at-1-20-41-PM.png",
+      "https://i.postimg.cc/N0vRNyfq/Screenshot-2024-03-15-at-1-20-51-PM.png",
+    ],
+    url: "https://www.instagram.com/p/CygTcPxN1ig",
+    date: "16-10-2023",
+  },
+  {
+    place: "",
+    location: "Beit Furik",
+    caption: `Specialized practical training in a number of important topics in the bee sector under the supervision of Engineer Zaid Jawabreh, Head of the Bee Department in the Agriculture Directorate in Nablus. A number of women’s cooperatives participated in the training: Rataj Cooperative - Asira, Juthur Nursery - Beit Furik, Kanaan Cooperative - Salem, and Duma Cooperative. The training was conducted in Mansour Hanani's apiary in Beit Furik.`,
+    images: [
+      "https://i.postimg.cc/sgrFscTM/Screenshot-2024-03-15-at-1-07-13-PM.png",
+    ],
+    url: "https://www.instagram.com/p/Cur_unetvIN",
+    date: "14-07-2023",
+  },
+  {
+    place: "Al-Mughayir Cooperative",
+    location: "Al Mughayir",
+    caption: `A solidarity and support visit to the Al-Mughayir Agricultural Cooperative Society, at the initiative of the Nablus Cooperatives Network and the Tanwiri Forum, and within the activities of the Partnership Youth Forum.
+      <br />
+      <br />
+      The village of Al-Mughayir suffers from repeated attacks by the occupation on the village, closing its entrances and besieging it. Also, during the last storm on 5/29, the cooperative was exposed to damage to crops, including varicose trees. Volunteers, representatives of the partner cooperatives, worked on the land and contributed to the rehabilitation of the grape project.
+      <br />
+      <br />
+      Al-Mughayir Cooperative Coordinator, Ghassan Abu Alia, talked about the establishment of the cooperative, the number of its members, its achievements, and the challenges they face, such as water scarcity, distribution, and the occupation’s harassment of them under the pretext of the area’s classifications, what is known as (C). The volunteers then went on a tour of Al-Mughayir village, getting to know its facilities, and talking with the people about their suffering from the occupation, its settlers, the confiscation of lands, and their inability to reach their lands.`,
+    images: [
+      "https://i.postimg.cc/cLq3HySs/Screenshot-2024-03-15-at-1-03-39-PM.png",
+      "https://i.postimg.cc/XYwCBHj9/Screenshot-2024-03-15-at-1-03-50-PM.png",
+      "https://i.postimg.cc/0NPJYYjF/Screenshot-2024-03-15-at-1-03-59-PM.png",
+      "https://i.postimg.cc/c1bYptkt/Screenshot-2024-03-15-at-1-04-10-PM.png",
+    ],
+    url: "https://www.instagram.com/p/CtUX5HHNSgp",
+    date: "10-06-2023",
+  },
+  {
+    place: "West Line Cooperative",
+    location: "West Ramallah",
+    caption: `Today’s wheat harvest from the young men and women of the West Line Cooperative, which consists of several cooperatives and farms located in the area West Ramallah (Ard Al Falahin, Ard Al Ya'as, Rummana, Om Suleiman, Al-Falah’s Farm).`,
+    images: [
+      "https://i.postimg.cc/6pxjnPX0/2023-05-30-18-01-22-UTC-1.jpg",
+      "https://i.postimg.cc/kMZhX4YL/2023-05-30-18-01-22-UTC-2.jpg",
+      "https://i.postimg.cc/5yZPP7Ff/2023-05-30-18-01-22-UTC-3.jpg",
+      "https://i.postimg.cc/8P6XFSqc/2023-05-30-18-01-22-UTC-4.jpg",
+      "https://i.postimg.cc/wMtfQ8MW/2023-05-30-18-01-22-UTC-5.jpg",
+    ],
+    url: "https://www.instagram.com/p/Cs4GiD9t5t0",
+    date: "30-05-2023",
+  },
+  {
+    place: "AlArdu Lana",
+    location: "Arraba",
+    caption: `A new cooperative group (Al-Ardu Lana Cooperative - الأرض لنا) is making its way in the town of Arraba in Jenin, where a dunum of greenhouses has been rented and planted with beans. Now the process of distributing the produce within the town is underway in the form of requests from residents who support the project.`,
+    images: [
+      "https://i.postimg.cc/QMkqQNbN/Screenshot-2024-03-15-at-12-38-13-PM.png",
+    ],
+    url: "https://www.instagram.com/p/CsHRISYNs9F/",
+    date: "11-05-2023",
+  },
+  {
+    place: "",
     location: "West Bank",
     caption: `Over 100 food baskets have been donated to families during the holy month of Ramadan.
       <br />
