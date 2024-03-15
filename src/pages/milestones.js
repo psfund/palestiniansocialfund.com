@@ -2,6 +2,40 @@ import { MainLayout } from "src/layouts";
 
 const milestones = [
   {
+    id: 20,
+    date: "Mar 01, 2024",
+    description: `Launched our second campaign, Long Live Our Workers, to raise $20,000 to help provide work opportunities at the cooperatives for Gazan workers stranded in the West Bank during the war on Gaza.`,
+    url: "https://www.instagram.com/p/C3-kRl-L-ng",
+  },
+  {
+    id: 19,
+    date: "Feb 26, 2024",
+    description: `We raised $45,000 thanks to pouring support of people in the last 5-months during the war on Gaza, a huge milestone in the fund. The money has already been sent to help develop different cooperatives.`,
+    url: "",
+  },
+  {
+    id: 18,
+    date: "Feb 03, 2024",
+    description: `Community members and youth joined us for a film screening and discussion on the
+      significance of cooperative farming in the occupied West Bank.
+      Cohosted by the Palestinian Social Fund, the Popular Art Center,
+      and the Palestinian Youth Movement, we discussed the nature of agriculture and
+      ecological practices as a form of popular resistance and steadfastness
+      against the exploitation, liberalization and destruction of our natural
+      resources and economy at the hands of the Zionist regime.
+      
+      The path to liberation is through our people’s struggle to remain steadfast 
+      on their land. Our deep-rooted connection to our land enables us to fight for
+      full liberation and return! ✊ 🇵🇸`,
+    url: "https://www.instagram.com/p/C27whynonIX",
+  },
+  {
+    id: 17,
+    date: "Aug 31, 2023",
+    description: `We exceeded our goal for the Raise the Yield Campaign by 70%, riasing $24,000. The money was used to help purchase 2 cows for the Duma Cooperative which had its barns demolished on top of its cows, 2 greenhouses and toolings for a various other cooperatives.`,
+    url: "https://www.instagram.com/p/CwnaI_tAAwI",
+  },
+  {
     id: 16,
     date: "Apr 11, 2023",
     description:
