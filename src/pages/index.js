@@ -113,6 +113,15 @@ const Home = () => {
                     {post.location} {post.place && `/ ${post.place}`} ·{" "}
                     {post.date}
                   </p>
+                  {post.url && (
+                    <a
+                      target="_blank"
+                      href={post.url}
+                      className="text-blue-500 hover:text-blue-700"
+                    >
+                      {post.url}
+                    </a>
+                  )}
                 </div>
 
                 <ul
