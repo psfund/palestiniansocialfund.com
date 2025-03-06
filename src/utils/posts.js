@@ -1,6 +1,26 @@
 const posts = [
   {
     place: "",
+    location: "Tulkarm",
+    caption: `
+      The Support (إسناد) Campaign in Tulkarm Camp continues!
+      <br /><br />
+      With the beginning of the holy month of Ramadan, food parcels were distributed to the resilient and trapped families inside the camp.
+      <br /><br />
+      The Support (إسناد) Campaign is a community campaign started by the Popular Art Centre and the Centre for Return (مركز العودة) in Tulkarm Camp.
+      And the campaign has been going on for 15 months with the start of the war of genocide against our Palestinian people.
+    `,
+    images: [
+      "https://i.postimg.cc/65Rhc0k0/temp-Image-F7he-MH.avif",
+      "https://i.postimg.cc/wjpQGNHd/temp-Image-Fx-URn-V.avif",
+      "https://i.postimg.cc/x133DdTN/temp-Image-Ge-FFJJ.avif",
+      "https://i.postimg.cc/FFwZ0qBz/temp-Image-Ol-F14j.avif",
+    ],
+    url: "https://www.facebook.com/PopularArtCentre/posts/pfbid02geitH7aBpKX8zrwxRDvnEJUTaVqPBkfVxDBCg5hCUMGuLG9J7H2yjzfL7ZcCaF7Nl",
+    date: "02-03-2025",
+  },
+  {
+    place: "",
     location: "New York City",
     caption: `One of our members co-authored an article about the cooperative movement taking root in Palestine on Hammer&Hope, an online magazine on Black politics and culture. Give it a read to learn more!`,
     images: ["https://i.postimg.cc/m26xd8rS/temp-Image-Hme-X5k.avif"],
