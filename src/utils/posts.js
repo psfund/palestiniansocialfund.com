@@ -8,6 +8,14 @@ const posts = [
     date: "05-11-2024",
   },
   {
+    place: "National SJP Conference",
+    location: "Washington D.C.",
+    caption: `One of our members presented the work of the Palestinian Social Fund to chapters of SJP in North America, focusing on concepts of food sovereignty and building popular cradle to support our people's resistance.`,
+    images: [],
+    url: "",
+    date: "02-11-2024",
+  },
+  {
     place: "",
     location: "Montreal",
     caption: `
