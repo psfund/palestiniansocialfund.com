@@ -1,6 +1,53 @@
 const posts = [
   {
     place: "",
+    location: "New York City",
+    caption: `One of our members co-authored an article about the cooperative movement taking root in Palestine on Hammer&Hope, an online magazine on Black politics and culture. Give it a read to learn more!`,
+    images: ["https://i.postimg.cc/m26xd8rS/temp-Image-Hme-X5k.avif"],
+    url: "https://hammerandhope.org/article/palestine-west-bank-economy",
+    date: "05-11-2024",
+  },
+  {
+    place: "",
+    location: "Montreal",
+    caption: `
+      After a successful “Long Live Our Workers” campaign (raised $20k) where we provided work at cooperative farms for Gazan workers stranded in the West Bank, we sent another $13,000 to subsidize their income until the end of the year.
+      <br />
+      <br />
+      This is all thanks to your support and continued solidarity for Palestine as we go through the most important and difficult time in the history of our struggle.
+      <br />
+      <br />
+      The fund is strong and continuing to support the cooperative farming movement as a way to break the dependency on the occupier’s food, a link in the chains ⛓️‍💥 that we will break!
+      <br />
+      <br />
+      Long live Palestine! Long live the struggle!
+      <br />
+      <br />
+      To liberation and beyond ✊🇵🇸
+    `,
+    images: ["https://i.postimg.cc/44VY1mb8/temp-Image-Eby-YYy.avif"],
+    url: "https://www.instagram.com/p/DBfEWV8tp1o/",
+    date: "23-10-2024",
+  },
+  {
+    place: "",
+    location: "Montreal",
+    caption: `
+      In the continuing genocide on the Palestinian people in Gaza, over 2000 Gazan workers have been stranded in the West Bank, unable to return to their families who are under the constant bombardment of the occupation.
+      <br /><br />
+      These workers have been staying in the streets or hosted at families’ homes, with no income or way back home. The PSF sought to raise money to get some of them involved in the farming coops during their time in the West Bank and provide an income that gives them the ability to move around or top up their phone plan to speak to their families in Gaza.
+      <br /><br />
+      We hit our goal for $20,000 providing work for 10 Gazans for 5 months at several farming coops. Without the existence of the coops, this campaign wouldn’t have been possible. The coops are spaces which provide work opportunities, social security, and most importantly pave the way toward food sovereignty. And this first campaign of its kind proves the ability of the coops to be essential and productive spaces in the struggle for liberation.
+    `,
+    images: [
+      "https://i.postimg.cc/wjsZtYds/temp-Image61j2k-T.avif",
+      "https://i.postimg.cc/fbnFmqwq/temp-Imaget-EOifb.avif",
+    ],
+    url: "https://www.instagram.com/p/C8Fb4iCOcHz",
+    date: "11-06-2024",
+  },
+  {
+    place: "",
     location: "Montreal",
     caption: `After 146 days of genocide committed on Gaza, the occupation has also increased aggression on the West Bank.
     <br />
