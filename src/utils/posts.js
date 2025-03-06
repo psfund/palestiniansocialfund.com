@@ -40,8 +40,8 @@ const posts = [
       We hit our goal for $20,000 providing work for 10 Gazans for 5 months at several farming coops. Without the existence of the coops, this campaign wouldn’t have been possible. The coops are spaces which provide work opportunities, social security, and most importantly pave the way toward food sovereignty. And this first campaign of its kind proves the ability of the coops to be essential and productive spaces in the struggle for liberation.
     `,
     images: [
-      "https://i.postimg.cc/wjsZtYds/temp-Image61j2k-T.avif",
       "https://i.postimg.cc/fbnFmqwq/temp-Imaget-EOifb.avif",
+      "https://i.postimg.cc/wjsZtYds/temp-Image61j2k-T.avif",
     ],
     url: "https://www.instagram.com/p/C8Fb4iCOcHz",
     date: "11-06-2024",
