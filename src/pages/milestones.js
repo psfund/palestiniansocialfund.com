@@ -2,6 +2,47 @@ import { MainLayout } from "src/layouts";
 
 const milestones = [
   {
+    id: 25,
+    date: "Dec 31, 2024",
+    description: `
+      The PSF concluded the year having sent $91,000 to support the cooperative movement, an all time high that
+      couldn't have been done without you. The funds went to purchasing greenhouses, irrigation networks, farming
+      tools, and more, but most importantly it helped employ stranded Gazans in the West Bank at the cooperatives
+      to protect their livelihood and dignity while their loved ones in Gaza faced the ongoing genocide.
+    `,
+    url: "",
+  },
+  {
+    id: 24,
+    date: "Nov 05, 2024",
+    description: `One of our members co-authored an article about the cooperative movement taking root in Palestine on Hammer&Hope, an online magazine on Black politics and culture. Give it a read to learn more!`,
+    url: "https://hammerandhope.org/article/palestine-west-bank-economy",
+  },
+  {
+    id: 23,
+    date: "Nov 02, 2024",
+    description: `One of our members attended the National SJP Conference, presenting the work of the Palestinian Social Fund to chapters of SJP in North America, with a focus on concepts of food sovereignty and building popular cradle to support our people's resistance.`,
+    url: "",
+  },
+  {
+    id: 22,
+    date: "Oct 23, 2024",
+    description: `After a successful “Long Live Our Workers” campaign (raised $20k) where we provided work at cooperative farms for Gazan workers stranded in the West Bank, we sent another $13,000 to subsidize their income until the end of the year.`,
+    url: "https://www.instagram.com/p/DBfEWV8tp1o/",
+  },
+  {
+    id: 21,
+    date: "Jun 11, 2024",
+    description: `We hit our goal for $20,000 providing work for 10 Gazans for 5 months at several farming coops. Without the existence of the coops, this campaign wouldn’t have been possible. The coops are spaces which provide work opportunities, social security, and most importantly pave the way toward food sovereignty. And this first campaign of its kind proves the ability of the coops to be essential and productive spaces in the struggle for liberation.`,
+    url: "https://www.instagram.com/p/C8Fb4iCOcHz",
+  },
+  {
+    id: 21,
+    date: "Jun 11, 2024",
+    description: `We hit our goal for $20,000 providing work for 10 Gazans for 5 months at several farming coops. Without the existence of the coops, this campaign wouldn’t have been possible. The coops are spaces which provide work opportunities, social security, and most importantly pave the way toward food sovereignty. And this first campaign of its kind proves the ability of the coops to be essential and productive spaces in the struggle for liberation.`,
+    url: "https://www.instagram.com/p/C8Fb4iCOcHz",
+  },
+  {
     id: 20,
     date: "Mar 01, 2024",
     description: `Launched our second campaign, Long Live Our Workers, to raise $20,000 to help provide work opportunities at the cooperatives for Gazan workers stranded in the West Bank during the war on Gaza.`,
