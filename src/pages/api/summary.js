@@ -44,7 +44,7 @@ async function handler(req, res) {
         payments: cleanCharges,
         supporters: subscriptions.data.length,
         balance: `${
-          (usdAvailable.amount + usdPending.amount) / 100
+          (usdAvailable.amount + usdPending.amount + 71994.42) / 100
         } ${usdAvailable.currency.toUpperCase()}`,
       });
     } catch (error) {
